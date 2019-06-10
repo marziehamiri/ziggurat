@@ -209,6 +209,8 @@
                         <img src="img/upload1.png" style="padding: 12%">
                     </div>
 
+                    <h1>aaa</h1>
+
                     <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2">
                         <button class="btn" style="margin: 54% 0;background-color: #00aeef;color: #ffffff;"
                                 onclick="$('#uploadFile').click()">آپلود فایل

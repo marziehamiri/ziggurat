@@ -1,0 +1,85 @@
+
+
+#wrapper6 {
+
+    width: 100%;
+    height: 180%;
+    margin: 0px 0 -230px 0px;
+    position: relative;
+    bottom: 0;
+    left: 0%;
+}
+#inner6 {
+    width: 100%;
+    height: 350px;
+
+    position: relative;
+    overflow: hidden;
+}
+.caroufredsel_wrapper{
+    display: block;
+    text-align: center;
+    float: none;
+    position: relative;
+    top: auto;
+    right: auto;
+
+    left: auto;
+    z-index: auto;
+    width: 1319px;
+    height: 500px;!important;
+    margin: 0;
+    overflow: hidden;
+}
+#carousel6 div {
+    border: 1px solid rgba(216, 216, 216, 0.69);
+    background: #fff;
+    width: 264px;
+    height: 300px;
+    float: left;
+    padding: 10px;
+    margin: 0 5px;
+
+}
+#carousel6 div:hover{
+    box-shadow: 10px -10px 10px 10px rgba(0,0,0,.08);
+
+}
+
+#prev6{
+
+    background-repeat: no-repeat;
+    left:0;
+
+}
+#next6{
+
+    background-repeat: no-repeat;
+    right:0;
+
+}
+#prev6, #next6 {
+    display: block;
+    width: 50px;
+    height: 80px;
+    margin-top: -40px;
+    position: absolute;
+    top: 55%;
+    z-index: 2;
+    font-size: 30px;
+}
+.btnslide2:hover{
+    background-color: #0085b4;
+    color: white;
+
+}
+.btnslide2{
+
+    background-color: #00aeef;
+    border-radius:10px;
+    color: white;
+    width: 110px;
+
+}
+
+

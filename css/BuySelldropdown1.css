@@ -1,0 +1,6 @@
+.show-on-hover:hover > ul.dropdown-menu {
+    display: block;
+}
+.drop li{
+   direction: rtl;
+}

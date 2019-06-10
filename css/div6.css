@@ -1,0 +1,26 @@
+
+
+#wrapper6 {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    height: 170px;
+    position: absolute;
+    top: 50%;
+    margin-top: -85px;
+}
+#wrapper6 {
+    width: 90%;
+    left: 5%;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ccc;
+}
+
+#carousel6{
+    margin: 10px 5px;
+    border: none;
+    display: block;
+
+}
+
+
+

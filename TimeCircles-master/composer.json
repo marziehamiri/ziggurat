@@ -13,6 +13,7 @@
       "ext-mysqli": "*",
       "ext-json": "*",
       "ext-curl": "*",
-      "ext-soap": "*"
+      "ext-soap": "*",
+      "ext-gd": "*"
     }
 }

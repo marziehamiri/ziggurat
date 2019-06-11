@@ -83,11 +83,11 @@ if (
     $mobile = $db->Real($_POST['mobile']);
     $profileimgname = $db->Real($_POST['profileimgname']);
     $backgroundimgname = $db->Real($_POST['backgroundimgname']);
-    $rand = rand(1, 222222222);
+    $rand = rand(1, 22222222222222);
 
     $picture = mkdir("img_profile/" . $rand);
 //??? ??? ?? ??????
-    $picture = $_FILES[$profileimgname]['name'];
+    $picture = $_FILES[ $profileimgname]['name'];
 //???? ??? ?? ??????
     $exp = explode(".", $picture);
     $end = end($exp);
@@ -107,7 +107,7 @@ if (
         $insert = mysqli_query($db->connect(),"INSERT INTO gallery (id, img_address, freelancer_id, employer_id, freeco_id, empco_id) VALUES
                                                                                               ( '$id','$to','$freelancerid','','','' )");
     }
-
+session_start();
     if( isset($_SESSION["login"]) && $_SESSION["login"]==true ) {
         $freelancerid= $_SESSION["submitid"];
         $select = mysqli_query($db->connect(),"SELECT * from submit where id=$freelancerid");

@@ -395,34 +395,62 @@
             }
         </script>
     <!--tajrebekari-->
-    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12"  style="margin: 3% 0">
+    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12"  style="margin: 3% 0" id="experience">
         <h4>تجربه کاری &nbsp;<button type="button" class="btn btn-primary" onclick="btnfreeworkex()">+</button></h4>
 
-       <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" style="float: right;font-size: 18px">
-           <label>سمت :</label> &nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
-           <label>نام شرکت :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
-           <label>در حال حاضر در اين سمت خدمت مي کنم :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
-           <label>از سال :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
-           <label>تا سال :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
-           <label>توضیحات :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxxxxxxxxxxx</label> &nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><hr>
-       </div>
+
         <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" id="freeworkex" style="display: none;float: right;border: 1px solid darkgrey;border-radius: 10px;padding: 2%;">
             <label>تجربه کاري خود را وارد نماييد</label>
             <i class="fas fa-times" style="float: left;margin: 1%"></i>
-            <input style="margin: 2% 0" type="text" class="form-control" placeholder="سمت * ">
-           <input style="margin: 2% 0" type="text" class="form-control" placeholder="نام شرکت">
+            <input style="margin: 2% 0" type="text" class="form-control" name="position" id="position" placeholder="سمت * ">
+           <input style="margin: 2% 0" type="text" class="form-control" name="company" id="company" placeholder="نام شرکت">
            <input style="margin: 2% 0" type="checkbox" class="form-group-lg">&nbsp; در حال حاضر در اين سمت خدمت مي کنم
-            <input style="margin: 2% 0" type="text" class="form-control" placeholder="تاریخ شروع">
+            <input style="margin: 2% 0" type="text" class="form-control" name="fromex" id="fromex" placeholder="تاریخ شروع">
 
-            <input style="margin: 2% 0" type="text" class="form-control" placeholder="تا سال ">
-            <label>توضیحات :</label><br><textarea type="text" class="form-control"></textarea>
+            <input style="margin: 2% 0" type="text" class="form-control" name="toox" id="toox" placeholder="تا سال ">
+            <label>توضیحات :</label><br><textarea name="descriptionx" id="descriptionx" type="text" class="form-control"></textarea>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
-                <button type="button" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
+                <button type="button" class="btn btn-success" onclick="saveworkex()" style="width: 22%;text-align:center;">ذخیره</button>
                 <button type="button" class="btn btn-danger" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
             </div>
 
         </div>
     </div>
+        <script>
+            function saveworkex() {
+                var position = $("#position").val();
+                var company = $("#company").val();
+                var fromex = $("#fromex").val();
+                var toox = $("#toox").val();
+                var descriptionx = $("#descriptionx").val();
+
+
+                var freedu=document.getElementById("freeworkex");
+
+
+                $.ajax({
+                    url: 'request/general/addexperience.php',
+                    data: {
+                        school: position,
+                        level: company,
+                        degree: fromex,
+                        frome: toox,
+                        too : descriptionx,
+
+
+
+                    },
+                    dataType: 'json',
+                    type: 'POST',
+                    success: function (data) {
+
+                        $("#experience").append(data['resultsex']);
+                        document.getElementById("freeworkex").style.display="none";
+
+                    }
+                });
+            }
+        </script>
    <!--zaban-->
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="margin: 3% 0">
         <h4>ميزان تسلط به زبان انگليسي </h4>

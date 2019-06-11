@@ -2293,8 +2293,8 @@ function btnfreedu() {
     var freeworkex=document.getElementById("freeworkex");
     document.getElementById("freeworkex").style.display="block";
 
-}function btnfreesample() {
-    var freesample=document.getElementById("freesample");
-    document.getElementById("freesample").style.display="block";
+}function btnfreeportofilo() {
+    var freeportofilo=document.getElementById("freeportofilo");
+    document.getElementById("freeportofilo").style.display="block";
 
 }

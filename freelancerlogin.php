@@ -368,8 +368,6 @@
                 var avg = $("#avg").val();
                 var description = $("#description").val();
                 var freedu=document.getElementById("freedu");
-
-
                 $.ajax({
                     url: 'request/general/addeducation.php',
                     data: {
@@ -380,8 +378,6 @@
                         too : too,
                         avg : avg,
                         description : description
-
-
                     },
                     dataType: 'json',
                     type: 'POST',
@@ -389,7 +385,6 @@
 
                     $("#education").append(data['resultsedu']);
                         document.getElementById("freedu").style.display="none";
-
                     }
                 });
             }
@@ -404,7 +399,7 @@
             <i class="fas fa-times" style="float: left;margin: 1%"></i>
             <input style="margin: 2% 0" type="text" class="form-control" name="position" id="position" placeholder="سمت * ">
            <input style="margin: 2% 0" type="text" class="form-control" name="company" id="company" placeholder="نام شرکت">
-           <input style="margin: 2% 0" type="checkbox" class="form-group-lg">&nbsp; در حال حاضر در اين سمت خدمت مي کنم
+           <input style="margin: 2% 0" type="checkbox" class="form-group-lg" name="serve" id="serve">&nbsp; در حال حاضر در اين سمت خدمت مي کنم
             <input style="margin: 2% 0" type="text" class="form-control" name="fromex" id="fromex" placeholder="تاریخ شروع">
 
             <input style="margin: 2% 0" type="text" class="form-control" name="toox" id="toox" placeholder="تا سال ">
@@ -420,33 +415,26 @@
             function saveworkex() {
                 var position = $("#position").val();
                 var company = $("#company").val();
+                var serve = $("#serve").checked();
                 var fromex = $("#fromex").val();
                 var toox = $("#toox").val();
                 var descriptionx = $("#descriptionx").val();
-
-
-                var freedu=document.getElementById("freeworkex");
-
-
+                var freeworkex=document.getElementById("freeworkex");
                 $.ajax({
                     url: 'request/general/addexperience.php',
                     data: {
-                        school: position,
-                        level: company,
-                        degree: fromex,
-                        frome: toox,
-                        too : descriptionx,
-
-
-
-                    },
+                        position: position,
+                        company: company,
+                        serve: serve,
+                        fromex: fromex,
+                        toox: toox,
+                        descriptionx : descriptionx,
+                            },
                     dataType: 'json',
                     type: 'POST',
                     success: function (data) {
-
                         $("#experience").append(data['resultsex']);
                         document.getElementById("freeworkex").style.display="none";
-
                     }
                 });
             }
@@ -595,12 +583,12 @@
     <!--nemone kar-->
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12"  style="margin: 3% 0">
         <h4>نمونه کارهاي خود را که قبلاً انجام داده ايد آپلود نماييد
-            &nbsp;<button type="button" class="btn btn-primary" onclick="btnfreesample()">+</button></h4>
+            &nbsp;<button type="button" class="btn btn-primary" onclick="btnfreeportofilo()">+</button></h4>
 
         <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" style="float: right;font-size: 18px">
             <label>نمونه کار 1</label> &nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
             </div>
-        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" id="freesample" style="display: none;float: right;border: 1px solid darkgrey;border-radius: 10px;padding: 2%;direction: rtl">
+        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" id="freeportofilo" style="display: none;float: right;border: 1px solid darkgrey;border-radius: 10px;padding: 2%;direction: rtl">
             <label>نمونه کار خود را وارد نماييد
             </label>
             <i class="fas fa-times" style="float: left;margin: 1%"></i>

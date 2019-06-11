@@ -337,18 +337,10 @@
     </div>
     <!--tahsil-->
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12"  style="margin: 3% 0" id="education">
-        <h4>تحصیلات &nbsp;<button type="button" class="btn btn-primary">+</button></h4>
+        <h4>تحصیلات &nbsp;<button type="button" class="btn btn-primary" onclick="btnfreedu()">+</button></h4>
 
-       <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" style="float: right;font-size: 18px">
-           <label>مدرسه/دانشگاه :</label> &nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
-           <label>مقطع تحصیلی :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
-           <label>مدرک تحصیلی :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
-           <label>از سال :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
-           <label>تا سال :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
-           <label>معدل :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
-           <label>توضیحات :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxxxxxxxxxxx</label> &nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><hr>
-       </div>
-        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" style="float: right;border: 1px solid darkgrey;border-radius: 10px;padding: 2%;">
+
+        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" id="freedu" style="display: none;float: right;border: 1px solid darkgrey;border-radius: 10px;padding: 2%;">
             <label>تحصيلات خود را وارد نماييد</label>
             <i class="fas fa-times" style="float: left;margin: 1%"></i>
             <input style="margin: 2% 0" type="text" class="form-control" name="school" id="school" placeholder="مدرسه/دانشگاه">
@@ -375,6 +367,8 @@
                 var too = $("#too").val();
                 var avg = $("#avg").val();
                 var description = $("#description").val();
+                var freedu=document.getElementById("freedu");
+
 
                 $.ajax({
                     url: 'request/general/addeducation.php',
@@ -394,13 +388,15 @@
                     success: function (data) {
 
                     $("#education").append(data['resultsedu']);
+                        document.getElementById("freedu").style.display="none";
+
                     }
                 });
             }
         </script>
     <!--tajrebekari-->
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12"  style="margin: 3% 0">
-        <h4>تجربه کاری &nbsp;<button type="button" class="btn btn-primary">+</button></h4>
+        <h4>تجربه کاری &nbsp;<button type="button" class="btn btn-primary" onclick="btnfreeworkex()">+</button></h4>
 
        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" style="float: right;font-size: 18px">
            <label>سمت :</label> &nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
@@ -410,7 +406,7 @@
            <label>تا سال :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
            <label>توضیحات :</label>&nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxxxxxxxxxxxx</label> &nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><hr>
        </div>
-        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" style="float: right;border: 1px solid darkgrey;border-radius: 10px;padding: 2%;">
+        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" id="freeworkex" style="display: none;float: right;border: 1px solid darkgrey;border-radius: 10px;padding: 2%;">
             <label>تجربه کاري خود را وارد نماييد</label>
             <i class="fas fa-times" style="float: left;margin: 1%"></i>
             <input style="margin: 2% 0" type="text" class="form-control" placeholder="سمت * ">
@@ -568,15 +564,15 @@
             </option>
         </select>
     </div>
-    <!--tahsil-->
+    <!--nemone kar-->
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12"  style="margin: 3% 0">
         <h4>نمونه کارهاي خود را که قبلاً انجام داده ايد آپلود نماييد
-            &nbsp;<button type="button" class="btn btn-primary">+</button></h4>
+            &nbsp;<button type="button" class="btn btn-primary" onclick="btnfreesample()">+</button></h4>
 
         <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" style="float: right;font-size: 18px">
             <label>نمونه کار 1</label> &nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
             </div>
-        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" style="float: right;border: 1px solid darkgrey;border-radius: 10px;padding: 2%;direction: rtl">
+        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" id="freesample" style="display: none;float: right;border: 1px solid darkgrey;border-radius: 10px;padding: 2%;direction: rtl">
             <label>نمونه کار خود را وارد نماييد
             </label>
             <i class="fas fa-times" style="float: left;margin: 1%"></i>

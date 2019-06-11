@@ -2284,3 +2284,17 @@ function freeemp() {
     document.getElementById("headpage").style.display="none";
 }
 // freelancerlogin
+//freedu
+function btnfreedu() {
+    var freedu=document.getElementById("freedu");
+    document.getElementById("freedu").style.display="block";
+
+}function btnfreeworkex() {
+    var freeworkex=document.getElementById("freeworkex");
+    document.getElementById("freeworkex").style.display="block";
+
+}function btnfreesample() {
+    var freesample=document.getElementById("freesample");
+    document.getElementById("freesample").style.display="block";
+
+}

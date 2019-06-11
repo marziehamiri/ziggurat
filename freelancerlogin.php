@@ -585,20 +585,18 @@
         <h4>نمونه کارهاي خود را که قبلاً انجام داده ايد آپلود نماييد
             &nbsp;<button type="button" class="btn btn-primary" onclick="btnfreeportofilo()">+</button></h4>
 
-        <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" style="float: right;font-size: 18px">
-            <label>نمونه کار 1</label> &nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">xxxxxxxxxx</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>
-            </div>
+
         <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" id="freeportofilo" style="display: none;float: right;border: 1px solid darkgrey;border-radius: 10px;padding: 2%;direction: rtl">
             <label>نمونه کار خود را وارد نماييد
             </label>
             <i class="fas fa-times" style="float: left;margin: 1%"></i>
-            <input style="margin: 2% 0" type="text" class="form-control" placeholder="عنوان کار*">
-            <input style="margin: 2% 0" type="text" class="form-control" placeholder="مهارت های استفاده شده در اين کار *">
-            <input style="margin: 2% 0" type="text" class="form-control" placeholder="سال انجام اين کار *">
-            <input style="margin: 2% 0" type="text" class="form-control" placeholder="زمان صرف شده برای انجام اين کار *">
-            <label>توضیحات :</label><br><textarea type="text" class="form-control"></textarea>
+            <input style="margin: 2% 0" type="text" class="form-control" id="titleportofilo" name="titleportofilo" placeholder="عنوان کار*">
+            <input style="margin: 2% 0" type="text" class="form-control" id="skill" name="skill" placeholder="مهارت های استفاده شده در اين کار *">
+            <input style="margin: 2% 0" type="text" class="form-control" id="year" name="year" placeholder="سال انجام اين کار *">
+            <input style="margin: 2% 0" type="text" class="form-control" id="time" name="time" placeholder="زمان صرف شده برای انجام اين کار *">
+            <label>توضیحات :</label><br><textarea type="text" id="description" name="description" class="form-control"></textarea>
             <div style="margin:3% 0">
-<button class="btn btn-default" onclick="$('#uploadFile').click()">آپلود عکس نمونه کار</button>
+<button type="button" class="btn btn-default" onclick="$('#uploadFile').click()">آپلود عکس نمونه کار</button>
             <i class="fas fa-info-circle" data-toggle="tooltip" title="فرمت های مورد قبول تصاوير:  jpg، jpeg، gif و png  و حداکثر حجم هر فايل: 10 مگابايت
 حداقل و حداکثر رزولوشن مورد قبول برای هر تصويربه ترتيب
  xxxx*yyyy پيکسل و xxxx*yyyy
@@ -610,7 +608,7 @@
         </div>
             <div style="margin:3% 0">
                 <input type="checkbox" class="form-group" onclick="rezayat()" id="rezayat0">&nbsp;از کارفرمای خود رضايت نامه حسن انجام کار گرفته ام
-                <br><br><button class="btn btn-default" id="rezayatname" disabled onclick="$('#uploadFile').click()">آپلود فايل رضايت نامه
+                <br><br><button type="button" class="btn btn-default" id="rezayatname" disabled onclick="$('#uploadFile').click()">آپلود فايل رضايت نامه
                 </button>
             <i class="fas fa-info-circle" data-toggle="tooltip" title="فرمت های مورد قبول تصاوير:  jpg، jpeg، gif و png  و حداکثر حجم هر فايل: 10 مگابايت
 حداقل و حداکثر رزولوشن مورد قبول برای هر تصويربه ترتيب
@@ -622,12 +620,40 @@
             </p>
         </div>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
-                <button type="button" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
+                <button type="button" onclick="btnportofilo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
                 <button type="button" class="btn btn-danger" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
             </div>
 
         </div>
     </div>
+        <script>
+            function saveworkex() {
+                var titleportofilo = $("#titleportofilo").val();
+                var skill = $("#skill").val();
+                var year = $("#year").checked();
+                var time = $("#time").val();
+                var toox = $("#toox").val();
+                var description = $("#description").val();
+                var freeportofilo=document.getElementById("freeportofilo");
+                $.ajax({
+                    url: 'request/general/addexperience.php',
+                    data: {
+                        titleportofilo: titleportofilo,
+                        skill: skill,
+                        year: year,
+                        time: time,
+                        toox: toox,
+                        description : description,
+                    },
+                    dataType: 'json',
+                    type: 'POST',
+                    success: function (data) {
+                        $("#experience").append(data['resultsportofilo']);
+                        document.getElementById("freeportofilo").style.display="none";
+                    }
+                });
+            }
+        </script>
     <!--tamayol-->
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="margin: 3% 0">
         <h4 style="margin: 2% 0">تمايل به انجام چه پروژه هايي داريد؟
@@ -675,7 +701,7 @@
 
                 <script>
                     function sendsms1() {
-
+                        var mobile = $("#mobile").val();
                         $.ajax({
                             url: 'request/general/sendsms.php',
                             data: {

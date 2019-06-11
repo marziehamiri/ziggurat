@@ -34,7 +34,7 @@
 <!--header-->
 <div class="col-lg-12 col-md-12 row" style="box-shadow: 0 0 4px 0 rgba(0,0,0,.08), 0 2px 4px 0 rgba(0,0,0,.12);background-color: white;margin-left: 0;z-index: 1;height: 80px">
 <a href="index.php">
-    <img src="img/logo2.png" style="position: absolute;top: 15%;right: 3%">
+    <img src="img/Logoart.png" style="position: absolute;top: 15%;right: 3%">
     </a>
 </div>
 <!--header-->

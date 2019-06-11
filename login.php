@@ -39,7 +39,7 @@
         </a>
     </p>
     <a href="index.php">
-    <img src="img/logo2.png" style="position: absolute;top: 15%;right: 3%">
+    <img src="img/Logoart.png" style="position: absolute;top: 15%;right: 3%">
     </a>
 </div>
 <!--header-->

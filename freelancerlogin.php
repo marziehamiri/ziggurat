@@ -297,7 +297,7 @@
                 </div>
                 <div >
 
-                    <img id='img-upload2' style="width: 1297px;height: 372px;border: none;"></div>
+                    <img id='img-upload2' style="width: 1200px;height: 372px;border: none;"></div>
             </div>
         <button id="clear1" class="btn btn-default">حذف</button>
         </div>
@@ -717,14 +717,6 @@
                     }
 
                 </script>
-
-
-
-
-
-
-
-
 
             </div>
         </div>

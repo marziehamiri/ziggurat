@@ -804,7 +804,6 @@
         <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="margin: 3% 0;display: none" id="khadamat1">
             <h4 style="margin: 2% 0">به چه خدماتي نياز داريد؟
             </h4>
-
             <!--cat-->
             <div class="panel panel-default col-md-3 col-lg-3 col-xs-6 col-sm-6" style="padding: 0;float: right;">
                 <div class="panel-heading">

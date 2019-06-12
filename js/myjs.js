@@ -2298,3 +2298,14 @@ function btnfreedu() {
     document.getElementById("freeportofilo").style.display="block";
 
 }
+function canclebtn() {
+    var freedu=document.getElementById("freedu");
+    var freeworkex=document.getElementById("freeworkex");
+    var freeportofilo=document.getElementById("freeportofilo");
+
+    document.getElementById("freedu").style.display="none";
+    document.getElementById("freeworkex").style.display="none";
+    document.getElementById("freeportofilo").style.display="none";
+
+
+}

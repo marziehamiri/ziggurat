@@ -353,7 +353,7 @@
             <label>توضیحات :</label><br><textarea type="text" name="description" id="description" class="form-control"></textarea>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
                 <button type="button" class="btn btn-success" style="width: 22%;text-align:center;" onclick="saveedu()">ذخیره</button>
-                <button type="button" class="btn btn-danger" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
+                <button type="button" class="btn btn-danger" onclick="canclebtn()" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
             </div>
 
         </div>
@@ -406,7 +406,7 @@
             <label>توضیحات :</label><br><textarea name="descriptionx" id="descriptionx" type="text" class="form-control"></textarea>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
                 <button type="button" class="btn btn-success" onclick="saveworkex()" style="width: 22%;text-align:center;">ذخیره</button>
-                <button type="button" class="btn btn-danger" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
+                <button type="button" class="btn btn-danger" onclick="canclebtn()" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
             </div>
 
         </div>
@@ -621,7 +621,7 @@
         </div>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
                 <button type="button" onclick="btnportofilo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
-                <button type="button" class="btn btn-danger" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
+                <button type="button" class="btn btn-danger" onclick="canclebtn()" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
             </div>
 
         </div>

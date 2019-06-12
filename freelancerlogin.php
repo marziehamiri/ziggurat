@@ -569,7 +569,7 @@
         </select>
     </div>
     <!--tahsil-->
-    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12"  style="margin: 3% 0">
+    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" id="portofilo"  style="margin: 3% 0">
         <h4>نمونه کارهاي خود را که قبلاً انجام داده ايد آپلود نماييد
             &nbsp;<button type="button" class="btn btn-primary">+</button></h4>
 
@@ -580,19 +580,19 @@
             <label>نمونه کار خود را وارد نماييد
             </label>
             <i class="fas fa-times" style="float: left;margin: 1%"></i>
-            <input style="margin: 2% 0" type="text" class="form-control" placeholder="عنوان کار*">
-            <input style="margin: 2% 0" type="text" class="form-control" placeholder="مهارت های استفاده شده در اين کار *">
-            <input style="margin: 2% 0" type="text" class="form-control" placeholder="سال انجام اين کار *">
-            <input style="margin: 2% 0" type="text" class="form-control" placeholder="زمان صرف شده برای انجام اين کار *">
-            <label>توضیحات :</label><br><textarea type="text" class="form-control"></textarea>
+            <input style="margin: 2% 0" type="text" class="form-control" id="titlep" placeholder="عنوان کار*">
+            <input style="margin: 2% 0" type="text" class="form-control" id="skillp" placeholder="مهارت های استفاده شده در اين کار *">
+            <input style="margin: 2% 0" type="text" class="form-control" id="yearp" placeholder="سال انجام اين کار *">
+            <input style="margin: 2% 0" type="text" class="form-control" id="timep" placeholder="زمان صرف شده برای انجام اين کار *">
+            <label>توضیحات :</label><br><textarea type="text" id="descriptionp" class="form-control"></textarea>
             <div style="margin:3% 0">
-<button class="btn btn-default" onclick="$('#uploadFile').click()">آپلود عکس نمونه کار</button>
+<button class="btn btn-default" name="imgaddress" onclick="$('#uploadFile').click()">آپلود عکس نمونه کار</button>
             <i class="fas fa-info-circle" data-toggle="tooltip" title="فرمت های مورد قبول تصاوير:  jpg، jpeg، gif و png  و حداکثر حجم هر فايل: 10 مگابايت
 حداقل و حداکثر رزولوشن مورد قبول برای هر تصويربه ترتيب
  xxxx*yyyy پيکسل و xxxx*yyyy
  پيکسل مي باشد." style="color: red;direction: rtl" ></i>
             <p style="font-size: 20px">
-                <input type="file" style="margin-right: 14%;display: none" id="uploadFile" >
+                <input type="file" name="imgaddressp" style="margin-right: 14%;display: none" id="uploadFile" >
 
             </p>
         </div>
@@ -605,17 +605,53 @@
  xxxx*yyyy پيکسل و xxxx*yyyy
  پيکسل مي باشد." style="color: red;direction: rtl" ></i>
             <p style="font-size: 20px">
-                <input type="file" style="margin-right: 14%;display: none" id="uploadFile" >
+                <input type="file" name="fileaddress" style="margin-right: 14%;display: none" id="uploadFile" >
 
             </p>
         </div>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
-                <button type="button" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
+                <button type="button" class="btn btn-success" onclick="sendportofillo()" style="width: 22%;text-align:center;">ذخیره</button>
                 <button type="button" class="btn btn-danger" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
             </div>
 
         </div>
     </div>
+        <script>
+            function sendportofillo() {
+                var title = $("#titlep").val();
+                var skill = $("#skillp").val();
+                var time = $("#timep").val();
+                var description1 = $("#descriptionp").val();
+                var imgaddress = $("#imgaddressp").val();
+                var fileaddress = $("#fileaddressp").val();
+
+                $.ajax({
+                    url: 'request/general/addportofilo.php',
+                    data: {
+                        title: title,
+                        skill: skill,
+                        time: time,
+                        description1: description1,
+                        imgaddress : imgaddress,
+                        fileaddress : fileaddress,
+
+
+
+                    },
+                    dataType: 'json',
+                    type: 'POST',
+                    success: function (data) {
+
+                        $("#portofilo").append(data['resultsporto']);
+                    }
+                });
+
+
+
+
+            }
+
+        </script>
     <!--tamayol-->
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="margin: 3% 0">
         <h4 style="margin: 2% 0">تمايل به انجام چه پروژه هايي داريد؟

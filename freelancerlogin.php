@@ -596,28 +596,29 @@
             <input style="margin: 2% 0" type="text" class="form-control" id="time" name="time" placeholder="زمان صرف شده برای انجام اين کار *">
             <label>توضیحات :</label><br><textarea type="text" id="descriptionp" name="descriptionp" class="form-control"></textarea>
             <div style="margin:3% 0">
-<button type="button" class="btn btn-default" onclick="$('#uploadFile').click()">آپلود عکس نمونه کار</button>
-            <i class="fas fa-info-circle" data-toggle="tooltip" title="فرمت های مورد قبول تصاوير:  jpg، jpeg، gif و png  و حداکثر حجم هر فايل: 10 مگابايت
+
+
+                <!--upload-->
+                <label for="pwd">آپلود عکس نمونه کار</label>
+                <i class="fas fa-info-circle" data-toggle="tooltip" title="فرمت های مورد قبول تصاوير:  jpg، jpeg، gif و png  و حداکثر حجم هر فايل: 10 مگابايت
 حداقل و حداکثر رزولوشن مورد قبول برای هر تصويربه ترتيب
  xxxx*yyyy پيکسل و xxxx*yyyy
  پيکسل مي باشد." style="color: red;direction: rtl" ></i>
-            <p style="font-size: 20px">
-                <input type="file" style="margin-right: 14%;display: none" id="uploadFile" >
+                <input type="file" class="form-control" id="file1">
 
-            </p>
+                <!--upload-->
+
         </div>
+            <br>
             <div style="margin:3% 0">
                 <input type="checkbox" class="form-group" onclick="rezayat()" id="rezayat0">&nbsp;از کارفرمای خود رضايت نامه حسن انجام کار گرفته ام
-                <br><br><button type="button" class="btn btn-default" id="rezayatname" disabled onclick="$('#uploadFile').click()">آپلود فايل رضايت نامه
-                </button>
+                <br><br>
+                <label for="pwd">آپلود فایل رضایت نامه</label>
             <i class="fas fa-info-circle" data-toggle="tooltip" title="فرمت های مورد قبول تصاوير:  jpg، jpeg، gif و png  و حداکثر حجم هر فايل: 10 مگابايت
 حداقل و حداکثر رزولوشن مورد قبول برای هر تصويربه ترتيب
  xxxx*yyyy پيکسل و xxxx*yyyy
  پيکسل مي باشد." style="color: red;direction: rtl" ></i>
-            <p style="font-size: 20px">
-                <input type="file" style="margin-right: 14%;display: none" id="uploadFile" >
-
-            </p>
+                <input type="file" class="form-control" id="file2" disabled>
         </div>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
                 <button type="button" onclick="portofilo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>

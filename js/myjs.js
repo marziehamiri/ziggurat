@@ -2195,12 +2195,12 @@ $(document).ready( function() {
 
 
 function rezayat() {
-    var rezayatname = document.getElementById("rezayatname");
+    var file2 = document.getElementById("file2");
     var rezayat0 = document.getElementById("rezayat0");
     if(rezayat0.checked){
-        rezayatname.disabled="";
+        file2.disabled="";
     }else{
-        rezayatname.disabled="disabled";
+        file2.disabled="disabled";
 
     }
 
@@ -2345,6 +2345,4 @@ function canclebtn() {
     document.getElementById("time").value="";
     document.getElementById("descriptionp").value="";
     document.getElementById("rezayat0").checked="";
-
-
 }

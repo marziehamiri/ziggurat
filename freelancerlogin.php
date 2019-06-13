@@ -350,7 +350,7 @@
 
             <input style="margin: 2% 0" type="text" class="form-control" name="too" id="too" placeholder="تا سال (يا انتظار مي رود که در اين سال به پايان برسد)">
             <input style="margin: 2% 0" type="text" class="form-control" name="avg" id="avg" placeholder="معدل">
-            <label>توضیحات :</label><br><textarea type="text" name="description" id="description" class="form-control"></textarea>
+            <label>توضیحات :</label><br><textarea type="text" name="descriptionf" id="descriptionf" class="form-control"></textarea>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
                 <button type="button" class="btn btn-success" style="width: 22%;text-align:center;" onclick="saveedu()">ذخیره</button>
                 <button type="button" class="btn btn-danger" onclick="canclebtn()" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
@@ -366,7 +366,7 @@
                 var frome = $("#frome").val();
                 var too = $("#too").val();
                 var avg = $("#avg").val();
-                var description = $("#description").val();
+                var descriptionf = $("#descriptionf").val();
                 var freedu=document.getElementById("freedu");
                 $.ajax({
                     url: 'request/general/addeducation.php',
@@ -377,7 +377,7 @@
                         frome: frome,
                         too : too,
                         avg : avg,
-                        description : description
+                        descriptionf : descriptionf
                     },
                     dataType: 'json',
                     type: 'POST',
@@ -581,7 +581,7 @@
         </select>
     </div>
     <!--nemone kar-->
-    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12"  style="margin: 3% 0">
+    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12"  style="margin: 3% 0" id="portofilo">
         <h4>نمونه کارهاي خود را که قبلاً انجام داده ايد آپلود نماييد
             &nbsp;<button type="button" class="btn btn-primary" onclick="btnfreeportofilo()">+</button></h4>
 
@@ -594,7 +594,7 @@
             <input style="margin: 2% 0" type="text" class="form-control" id="skill" name="skill" placeholder="مهارت های استفاده شده در اين کار *">
             <input style="margin: 2% 0" type="text" class="form-control" id="year" name="year" placeholder="سال انجام اين کار *">
             <input style="margin: 2% 0" type="text" class="form-control" id="time" name="time" placeholder="زمان صرف شده برای انجام اين کار *">
-            <label>توضیحات :</label><br><textarea type="text" id="description" name="description" class="form-control"></textarea>
+            <label>توضیحات :</label><br><textarea type="text" id="descriptionp" name="descriptionp" class="form-control"></textarea>
             <div style="margin:3% 0">
 <button type="button" class="btn btn-default" onclick="$('#uploadFile').click()">آپلود عکس نمونه کار</button>
             <i class="fas fa-info-circle" data-toggle="tooltip" title="فرمت های مورد قبول تصاوير:  jpg، jpeg، gif و png  و حداکثر حجم هر فايل: 10 مگابايت
@@ -633,7 +633,7 @@
                 var year = $("#year").checked();
                 var time = $("#time").val();
                 var toox = $("#toox").val();
-                var description = $("#description").val();
+                var description = $("#descriptionp").val();
                 var freeportofilo=document.getElementById("freeportofilo");
                 $.ajax({
                     url: 'request/general/addexperience.php',
@@ -643,12 +643,12 @@
                         year: year,
                         time: time,
                         toox: toox,
-                        description : description,
+                        descriptionp : descriptionp,
                     },
                     dataType: 'json',
                     type: 'POST',
                     success: function (data) {
-                        $("#experience").append(data['resultsportofilo']);
+                        $("#portofilo").append(data['resultsportofilo']);
                         document.getElementById("freeportofilo").style.display="none";
                     }
                 });

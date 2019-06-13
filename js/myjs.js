@@ -2306,6 +2306,25 @@ function canclebtn() {
     document.getElementById("freedu").style.display="none";
     document.getElementById("freeworkex").style.display="none";
     document.getElementById("freeportofilo").style.display="none";
+    document.getElementById("position").value="";
+    document.getElementById("school").value="";
+    document.getElementById("level").value="";
+    document.getElementById("degree").value="";
+    document.getElementById("frome").value="";
+    document.getElementById("too").value="";
+    document.getElementById("avg").value="";
+    document.getElementById("descriptionf").value="";
+    document.getElementById("company").value="";
+    document.getElementById("serve").value="";
+    document.getElementById("fromex").value="";
+    document.getElementById("toox").value="";
+    document.getElementById("descriptionx").value="";
+    document.getElementById("titleportofilo").value="";
+    document.getElementById("skill").value="";
+    document.getElementById("year").value="";
+    document.getElementById("time").value="";
+    document.getElementById("descriptionp").value="";
+    document.getElementById("rezayat0").value="";
 
 
 }

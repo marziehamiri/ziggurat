@@ -604,7 +604,7 @@
 حداقل و حداکثر رزولوشن مورد قبول برای هر تصويربه ترتيب
  xxxx*yyyy پيکسل و xxxx*yyyy
  پيکسل مي باشد." style="color: red;direction: rtl" ></i>
-                <input type="file" class="form-control" id="file1">
+                <input type="file" class="form-control" id="file1" >
 
                 <!--upload-->
 
@@ -618,7 +618,7 @@
 حداقل و حداکثر رزولوشن مورد قبول برای هر تصويربه ترتيب
  xxxx*yyyy پيکسل و xxxx*yyyy
  پيکسل مي باشد." style="color: red;direction: rtl" ></i>
-                <input type="file" class="form-control" id="file2" disabled>
+                <input type="file" class="form-control" id="file2" value="انتخاب" disabled>
         </div>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
                 <button type="button" onclick="portofilo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>

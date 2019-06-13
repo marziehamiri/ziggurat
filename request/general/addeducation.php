@@ -18,7 +18,7 @@ if(
     &&
     isset($_POST['avg'])
     &&
-    isset($_POST['description'])
+    isset($_POST['descriptionf'])
     &&
 
     !empty($_POST['school'])
@@ -33,7 +33,7 @@ if(
     &&
     !empty($_POST['avg'])
     &&
-    !empty($_POST['description'])
+    !empty($_POST['descriptionf'])
 
 
 ) {
@@ -43,7 +43,7 @@ if(
     $from = $db->Real(($_POST['frome']));
     $to = $db->Real(($_POST['too']));
     $avg = $db->Real(($_POST['avg']));
-    $description = $db->Real(($_POST['description']));
+    $description = $db->Real(($_POST['descriptionf']));
     session_start();
     if (isset($_SESSION["login"]) && $_SESSION["login"] == true) {
         $freelancerid = $_SESSION["submitid"];

@@ -397,7 +397,7 @@
         <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" id="freeworkex" style="display: none;float: right;border: 1px solid darkgrey;border-radius: 10px;padding: 2%;">
             <label>تجربه کاري خود را وارد نماييد</label>
             <i class="fas fa-times" style="float: left;margin: 1%"></i>
-            <input style="margin: 2% 0" type="text" class="form-control" name="position" id="position" placeholder="سمت * ">
+            <input style="margin: 2% 0" type="text" class="form-control" name="positionx" id="positionx" placeholder="سمت * ">
            <input style="margin: 2% 0" type="text" class="form-control" name="company" id="company" placeholder="نام شرکت">
            <input style="margin: 2% 0" type="checkbox" class="form-group-lg" name="serve" id="serve">&nbsp; در حال حاضر در اين سمت خدمت مي کنم
             <input style="margin: 2% 0" type="text" class="form-control" name="fromex" id="fromex" placeholder="تاریخ شروع">
@@ -413,9 +413,9 @@
     </div>
         <script>
             function saveworkex() {
-                var position = $("#position").val();
+                var positionx = $("#positionx").val();
                 var company = $("#company").val();
-                var serve = $("#serve").checked();
+                var serve = $("#serve").val();
                 var fromex = $("#fromex").val();
                 var toox = $("#toox").val();
                 var descriptionx = $("#descriptionx").val();
@@ -423,7 +423,7 @@
                 $.ajax({
                     url: 'request/general/addexperience.php',
                     data: {
-                        position: position,
+                        position: positionx,
                         company: company,
                         serve: serve,
                         fromex: fromex,
@@ -620,14 +620,14 @@
             </p>
         </div>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
-                <button type="button" onclick="btnportofilo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
+                <button type="button" onclick="portofilo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
                 <button type="button" class="btn btn-danger" onclick="canclebtn()" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
             </div>
 
         </div>
     </div>
         <script>
-            function saveworkex() {
+            function portofilo() {
                 var titleportofilo = $("#titleportofilo").val();
                 var skill = $("#skill").val();
                 var year = $("#year").checked();

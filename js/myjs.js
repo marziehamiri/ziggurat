@@ -2288,14 +2288,34 @@ function freeemp() {
 function btnfreedu() {
     var freedu=document.getElementById("freedu");
     document.getElementById("freedu").style.display="block";
+    document.getElementById("school").value="";
+    document.getElementById("level").value="";
+    document.getElementById("degree").value="";
+    document.getElementById("frome").value="";
+    document.getElementById("too").value="";
+    document.getElementById("avg").value="";
+    document.getElementById("descriptionf").value="";
 
 }function btnfreeworkex() {
     var freeworkex=document.getElementById("freeworkex");
     document.getElementById("freeworkex").style.display="block";
+    document.getElementById("positionx").value="";
+    document.getElementById("company").value="";
+    document.getElementById("serve").checked="";
+    document.getElementById("fromex").value="";
+    document.getElementById("toox").value="";
+    document.getElementById("descriptionx").value="";
 
 }function btnfreeportofilo() {
     var freeportofilo=document.getElementById("freeportofilo");
     document.getElementById("freeportofilo").style.display="block";
+    document.getElementById("titleportofilo").value="";
+    document.getElementById("skill").value="";
+    document.getElementById("year").value="";
+    document.getElementById("time").value="";
+    document.getElementById("descriptionp").value="";
+    document.getElementById("rezayat0").checked="";
+
 
 }
 function canclebtn() {
@@ -2306,7 +2326,7 @@ function canclebtn() {
     document.getElementById("freedu").style.display="none";
     document.getElementById("freeworkex").style.display="none";
     document.getElementById("freeportofilo").style.display="none";
-    document.getElementById("position").value="";
+    document.getElementById("positionx").value="";
     document.getElementById("school").value="";
     document.getElementById("level").value="";
     document.getElementById("degree").value="";
@@ -2315,7 +2335,7 @@ function canclebtn() {
     document.getElementById("avg").value="";
     document.getElementById("descriptionf").value="";
     document.getElementById("company").value="";
-    document.getElementById("serve").value="";
+    document.getElementById("serve").checked="";
     document.getElementById("fromex").value="";
     document.getElementById("toox").value="";
     document.getElementById("descriptionx").value="";
@@ -2324,7 +2344,7 @@ function canclebtn() {
     document.getElementById("year").value="";
     document.getElementById("time").value="";
     document.getElementById("descriptionp").value="";
-    document.getElementById("rezayat0").value="";
+    document.getElementById("rezayat0").checked="";
 
 
 }

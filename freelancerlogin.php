@@ -593,7 +593,7 @@
             <input style="margin: 2% 0" type="text" class="form-control" id="titleportofilo" name="titleportofilo" placeholder="عنوان کار*">
             <input style="margin: 2% 0" type="text" class="form-control" id="skill" name="skill" placeholder="مهارت های استفاده شده در اين کار *">
             <input style="margin: 2% 0" type="text" class="form-control" id="year" name="year" placeholder="سال انجام اين کار *">
-            <input style="margin: 2% 0" type="text" class="form-control" id="time" name="time" placeholder="زمان صرف شده برای انجام اين کار *">
+            <input style="margin: 2% 0" type="text" class="form-control" id="timeportofilo" name="timeportofilo" placeholder="زمان صرف شده برای انجام اين کار *">
             <label>توضیحات :</label><br><textarea type="text" id="descriptionp" name="descriptionp" class="form-control"></textarea>
             <div style="margin:3% 0">
 
@@ -604,21 +604,21 @@
 حداقل و حداکثر رزولوشن مورد قبول برای هر تصويربه ترتيب
  xxxx*yyyy پيکسل و xxxx*yyyy
  پيکسل مي باشد." style="color: red;direction: rtl" ></i>
-                <input type="file" class="form-control" id="file1" >
+                <input type="file" class="form-control" id="imgaddress" name="imgaddress">
 
                 <!--upload-->
 
         </div>
             <br>
             <div style="margin:3% 0">
-                <input type="checkbox" class="form-group" onclick="rezayat()" id="rezayat0">&nbsp;از کارفرمای خود رضايت نامه حسن انجام کار گرفته ام
+                <input type="checkbox" class="form-group" onclick="rezayat()" id="rezayat0" name="rezayat0">&nbsp;از کارفرمای خود رضايت نامه حسن انجام کار گرفته ام
                 <br><br>
                 <label for="pwd">آپلود فایل رضایت نامه</label>
             <i class="fas fa-info-circle" data-toggle="tooltip" title="فرمت های مورد قبول تصاوير:  jpg، jpeg، gif و png  و حداکثر حجم هر فايل: 10 مگابايت
 حداقل و حداکثر رزولوشن مورد قبول برای هر تصويربه ترتيب
  xxxx*yyyy پيکسل و xxxx*yyyy
  پيکسل مي باشد." style="color: red;direction: rtl" ></i>
-                <input type="file" class="form-control" id="file2" value="انتخاب" disabled>
+                <input type="file" class="form-control" id="fileaddress" name="fileaddress" disabled>
         </div>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
                 <button type="button" onclick="portofilo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
@@ -631,19 +631,23 @@
             function portofilo() {
                 var titleportofilo = $("#titleportofilo").val();
                 var skill = $("#skill").val();
-                var year = $("#year").checked();
-                var time = $("#time").val();
-                var toox = $("#toox").val();
-                var description = $("#descriptionp").val();
+                var year = $("#year").val();
+                var timeportofilo = $("#timeportofilo").val();
+                var descriptionp = $("#descriptionp").val();
+                var imgaddress = $("#imgaddress").name();
+                var fileaddress = $("#fileaddress").name();
+
+
                 var freeportofilo=document.getElementById("freeportofilo");
                 $.ajax({
-                    url: 'request/general/addexperience.php',
+                    url: 'request/general/addportofilo.php',
                     data: {
                         titleportofilo: titleportofilo,
                         skill: skill,
                         year: year,
-                        time: time,
-                        toox: toox,
+                        time: timeportofilo,
+                        imgaddress:imgaddress,
+                        fileaddress:fileaddress,
                         descriptionp : descriptionp,
                     },
                     dataType: 'json',

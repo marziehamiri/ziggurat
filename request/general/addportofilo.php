@@ -12,7 +12,7 @@ if(
     &&
     isset($_POST['year'])
     &&
-    isset($_POST['time'])
+    isset($_POST['timeportofilo'])
     &&
     isset($_POST['description'])
     &&
@@ -21,26 +21,23 @@ if(
     isset($_POST['fileaddress'])
     &&
 
+
     !empty($_POST['titleportofilo'])
     &&
     !empty($_POST['skill'])
     &&
     !empty($_POST['year'])
     &&
-    !empty($_POST['time'])
+    !empty($_POST['timeportofilo'])
     &&
     !empty($_POST['description'])
-//    &&
-//    !empty($_POST['imgaddress'])
-//    &&
-//    !empty($_POST['fileaddress'])
 
 
 ) {
     $title = $db->Real(($_POST['titleportofilo']));
     $skill = $db->Real(($_POST['skill']));
     $year = $db->Real(($_POST['year']));
-    $time = $db->Real(($_POST['time']));
+    $time = $db->Real(($_POST['timeportofilo']));
     $description = $db->Real(($_POST['description']));
     $imgaddress = $db->Real(($_POST['imgaddress']));
     $fileaddress = $db->Real(($_POST['fileaddress']));
@@ -49,7 +46,7 @@ if(
         $freelancerid = $_SESSION["submitid"];
         $id=$db->Gid();
         $insertportofilo = mysqli_query($db->connect(), "INSERT INTO portofilo(id, title, skill, year, time, description, imgaddress, fileaddress, status, freelancer_id)
- VALUES ('$db','$title','$skill','$year','$time','$description','$imgaddress','$fileaddress',0,'$freelancerid')");
+VALUES ('$db','$title','$skill','$year','$time','$description','$imgaddress','$fileaddress',0,'$freelancerid')");
 
         $query= mysqli_query($db->connect(),$insertportofilo);
 

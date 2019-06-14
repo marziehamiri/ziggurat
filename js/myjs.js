@@ -2195,12 +2195,12 @@ $(document).ready( function() {
 
 
 function rezayat() {
-    var file2 = document.getElementById("file2");
+    var fileaddress = document.getElementById("fileaddress");
     var rezayat0 = document.getElementById("rezayat0");
     if(rezayat0.checked){
-        file2.disabled="";
+        fileaddress.disabled="";
     }else{
-        file2.disabled="disabled";
+        fileaddress.disabled="disabled";
 
     }
 
@@ -2312,8 +2312,10 @@ function btnfreedu() {
     document.getElementById("titleportofilo").value="";
     document.getElementById("skill").value="";
     document.getElementById("year").value="";
-    document.getElementById("time").value="";
+    document.getElementById("timeportofilo").value="";
     document.getElementById("descriptionp").value="";
+    document.getElementById("imgaddress").value="";
+    document.getElementById("fileaddress").value="";
     document.getElementById("rezayat0").checked="";
 
 
@@ -2342,7 +2344,10 @@ function canclebtn() {
     document.getElementById("titleportofilo").value="";
     document.getElementById("skill").value="";
     document.getElementById("year").value="";
-    document.getElementById("time").value="";
+    document.getElementById("timeportofilo").value="";
     document.getElementById("descriptionp").value="";
+    document.getElementById("imgaddress").value="";
+    document.getElementById("fileaddress").value="";
     document.getElementById("rezayat0").checked="";
+    document.getElementById("fileaddress").disabled="disabled";
 }

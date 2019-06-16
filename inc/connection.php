@@ -57,6 +57,12 @@ class connection
      mysqli_close($this->connect());
      return;
  }
+    function savecover($base64img,$url,$name){
+        $base64img = str_replace('data:image/jpeg;base64,', '', $base64img);
+        $data = base64_decode($base64img);
+        $file = $url .$name.'.jpg';
+        file_put_contents($file, $data);
+    }
 
 
 }

@@ -604,36 +604,39 @@
 حداقل و حداکثر رزولوشن مورد قبول برای هر تصويربه ترتيب
  xxxx*yyyy پيکسل و xxxx*yyyy
  پيکسل مي باشد." style="color: red;direction: rtl" ></i>
-                <input type="file" class="form-control" id="imgaddress" name="imgaddress" >
-                <script>
-                    const File = document.getElementById("imgaddress");
-                    function convertToBase64(file,address) {
-                        const reader = new FileReader();
-                        reader.readAsDataURL(file);
-                        let Base64 = '';
-                        reader.onload = function() {
-                            $.ajax({
-                                url: address,
-                                data: {
-                                    imgaddress: reader.result
-                                },
-                                dataType: 'json',
-                                type: 'POST',
-                                success: function (data) {
-                                    $("#portofilo").append(data['resultsportofilo']);
-                                    document.getElementById("freeportofilo").style.display="none";
-                                }
-                            });
-                        };
-                        reader.onerror = function(e) {
-                            console.log("error: ", e);
-                        };
-                    }
-                    File.addEventListener("change", () => {
-                        // console.log("r: ", r);
-                        convertToBase64(File.files[0],'request/general/addportofilo.php');
-                    });
-                </script>
+                <input type="file" class="form-control" id="imgaddress" name="imgaddress" onchange="convertToBase64()">
+<!--                <script>-->
+<!--                    const File = document.getElementById("imgaddress");-->
+<!--                    function convertToBase64(file,address) {-->
+<!--                        var fileName = e. target. files[0]. name;-->
+<!--                        const reader = new FileReader();-->
+<!--                        reader.readAsDataURL(file);-->
+<!--                        let Base64 = '';-->
+<!--                        reader.onload = function() {-->
+<!--                            $.ajax({-->
+<!--                                url: 'request/general/addportofilo.php',-->
+<!--                                data: {-->
+<!--                                    img64: reader.result,-->
+<!--                                    imgname: fileName,-->
+<!---->
+<!--                                },-->
+<!--                                dataType: 'json',-->
+<!--                                type: 'POST',-->
+<!--                                success: function (data) {-->
+<!--                                    $("#portofilo").append(data['resultsportofilo']);-->
+<!--                                    document.getElementById("freeportofilo").style.display="none";-->
+<!--                                }-->
+<!--                            });-->
+<!--                        };-->
+<!--                        reader.onerror = function(e) {-->
+<!--                            console.log("error: ", e);-->
+<!--                        };-->
+<!--                    }-->
+<!--                    File.addEventListener("change", () => {-->
+<!--                        // console.log("r: ", r);-->
+<!--                        convertToBase64(File.files[0],'request/general/addportofilo.php');-->
+<!--                    });-->
+<!--                </script>-->
                 <!--upload-->
 
         </div>
@@ -649,24 +652,29 @@
                 <input type="file" class="form-control" id="fileaddress" name="fileaddress" disabled>
         </div>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
-                <button type="button" onclick="portofilo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
+                <button type="button" onclick="portofiloo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
                 <button type="button" class="btn btn-danger" onclick="canclebtn()" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
             </div>
 
         </div>
     </div>
         <script>
-            function portofilo() {
+            function portofiloo() {
                 var titleportofilo = $("#titleportofilo").val();
                 var skill = $("#skill").val();
                 var year = $("#year").val();
                 var timeportofilo = $("#timeportofilo").val();
                 var descriptionp = $("#descriptionp").val();
 
-                var fileaddress = $("#fileaddress").name();
-
+                const File = document.getElementById("imgaddress");
+                function convertToBase64(file,address) {
+                    var fileName = e. target. files[0]. name;
+                    const reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    let Base64 = '';
 
                 var freeportofilo=document.getElementById("freeportofilo");
+                    reader.onload = function() {
                 $.ajax({
                     url: 'request/general/addportofilo.php',
                     data: {
@@ -674,9 +682,10 @@
                         skill: skill,
                         year: year,
                         time: timeportofilo,
-
-                        fileaddress:fileaddress,
                         descriptionp : descriptionp,
+                        img64: reader.result,
+                        imgname: fileName,
+
                     },
                     dataType: 'json',
                     type: 'POST',
@@ -684,6 +693,15 @@
                         $("#portofilo").append(data['resultsportofilo']);
                         document.getElementById("freeportofilo").style.display="none";
                     }
+                });
+
+                    reader.onerror = function(e) {
+                        console.log("error: ", e);
+                    };
+                    }
+                File.addEventListener("change", () => {
+                    // console.log("r: ", r);
+                    convertToBase64(File.files[0],'request/general/addportofilo.php');
                 });
             }
         </script>

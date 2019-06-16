@@ -290,7 +290,7 @@
                 <div class="input-group">
             <span class="input-group-btn">
                 <span class="btn btn-default btn-file">
-                    Browse… <input type="file" id="imgInp1">
+                    Browse… <input type="file" id="imgInp1" >
                 </span>
             </span>
                     <input id='urlname1' name="backgroundimgname" type="text" class="form-control" readonly>
@@ -604,8 +604,37 @@
 حداقل و حداکثر رزولوشن مورد قبول برای هر تصويربه ترتيب
  xxxx*yyyy پيکسل و xxxx*yyyy
  پيکسل مي باشد." style="color: red;direction: rtl" ></i>
-                <input type="file" class="form-control" id="imgaddress" name="imgaddress">
+                <input type="file" class="form-control" id="imgaddress" name="imgaddress" >
+                <script>
+                    const File = document.getElementById("imgaddress");
 
+                    function convertToBase64(file,address) {
+                        const reader = new FileReader();
+                        reader.readAsDataURL(file);
+                        let Base64 = '';
+                        reader.onload = function() {
+                            $.ajax({
+                                url: address,
+                                data: {
+                                    imgaddress: reader.result
+                                },
+                                dataType: 'json',
+                                type: 'POST',
+                                success: function (data) {
+                                    $("#portofilo").append(data['resultsportofilo']);
+                                    document.getElementById("freeportofilo").style.display="none";
+                                }
+                            });
+                        };
+                        reader.onerror = function(e) {
+                            console.log("error: ", e);
+                        };
+                    }
+                    File.addEventListener("change", () => {
+                        // console.log("r: ", r);
+                        convertToBase64(File.files[0],'request/general/addportofilo.php');
+                    });
+                </script>
                 <!--upload-->
 
         </div>
@@ -634,7 +663,7 @@
                 var year = $("#year").val();
                 var timeportofilo = $("#timeportofilo").val();
                 var descriptionp = $("#descriptionp").val();
-                var imgaddress = $("#imgaddress").name();
+
                 var fileaddress = $("#fileaddress").name();
 
 
@@ -646,7 +675,7 @@
                         skill: skill,
                         year: year,
                         time: timeportofilo,
-                        imgaddress:imgaddress,
+
                         fileaddress:fileaddress,
                         descriptionp : descriptionp,
                     },

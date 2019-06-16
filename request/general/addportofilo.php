@@ -41,12 +41,41 @@ if(
     $description = $db->Real(($_POST['description']));
     $imgaddress = $db->Real(($_POST['imgaddress']));
     $fileaddress = $db->Real(($_POST['fileaddress']));
+
+    $rand = rand(1, 22222222);
+    $picture = mkdir("img_portofilo/" . $rand);
+//??? ??? ?? ??????
+    $picture = $_FILES[$imgaddress]['name'];
+//???? ??? ?? ??????
+    $exp = explode(".", $picture);
+    $end = end($exp);
+//?? ??? ???? ?? ??? ????
+    $new_name = rand() . "." . $end;
+// ??? ?? ?? cache ?? ????? uploader ???????
+    $from = $_FILES[$fileaddress]['tmp_name'];
+    $to = "img_portofilo/" . $rand . "/" . $new_name;
+    move_uploaded_file($from, $to);
+
+    $rand2 = rand(1, 22222222);
+    $picture2 = mkdir("file_portofilo/" . $rand2);
+//??? ??? ?? ??????
+    $picture2 = $_FILES[ $fileaddress]['name'];
+//???? ??? ?? ??????
+    $exp2 = explode(".", $picture2);
+    $end2 = end($exp2);
+//?? ??? ???? ?? ??? ????
+    $new_name2 = rand() . "." . $end2;
+// ??? ?? ?? cache ?? ????? uploader ???????
+    $from2 = $_FILES[ $fileaddress]['tmp_name'];
+    $to2 = "file_portofilo/" . $rand2 . "/" . $new_name2;
+    move_uploaded_file($from2, $to2);
+
     session_start();
     if (isset($_SESSION["login"]) && $_SESSION["login"] == true) {
         $freelancerid = $_SESSION["submitid"];
         $id=$db->Gid();
         $insertportofilo = mysqli_query($db->connect(), "INSERT INTO portofilo(id, title, skill, year, time, description, imgaddress, fileaddress, status, freelancer_id)
-VALUES ('$db','$title','$skill','$year','$time','$description','$imgaddress','$fileaddress',0,'$freelancerid')");
+VALUES ('$id','$title','$skill','$year','$time','$description','$imgaddress','$fileaddress',0,'$freelancerid')");
 
         $query= mysqli_query($db->connect(),$insertportofilo);
 

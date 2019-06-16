@@ -54,7 +54,7 @@ if(
 // ??? ?? ?? cache ?? ????? uploader ???????
     $from = $_FILES[$fileaddress]['tmp_name'];
     $to = "img_portofilo/" . $rand . "/" . $new_name;
-    move_uploaded_file($from, $to);
+    move_uploaded_file($fileaddress, $to);
 
     $rand2 = rand(1, 22222222);
     $picture2 = mkdir("file_portofilo/" . $rand2);
@@ -68,7 +68,7 @@ if(
 // ??? ?? ?? cache ?? ????? uploader ???????
     $from2 = $_FILES[ $fileaddress]['tmp_name'];
     $to2 = "file_portofilo/" . $rand2 . "/" . $new_name2;
-    move_uploaded_file($from2, $to2);
+    move_uploaded_file($fileaddress, $to2);
 
     session_start();
     if (isset($_SESSION["login"]) && $_SESSION["login"] == true) {

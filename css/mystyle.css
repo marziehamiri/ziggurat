@@ -3,7 +3,7 @@
     src:url("../fonts/IRANSans.ttf") ;
 }
 *{
-    font-family: "IRANSans";
+    font-family: "IRANSans", serif;
 }
 body , html{
 scroll-behavior: smooth;

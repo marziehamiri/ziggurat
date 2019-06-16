@@ -337,8 +337,9 @@
                         <tr>
                             <td  style="border-top: none;">
                                 <input type="checkbox" name="td1-2" id="check11" onclick="myfunction11()">&nbsp;همه زیر دسته بندی ها
-                            </td>
+                                <hr>  </td>
                         </tr>
+
                         <tr id="subinput">
 
                         </tr>

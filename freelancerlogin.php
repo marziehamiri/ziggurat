@@ -607,7 +607,6 @@
                 <input type="file" class="form-control" id="imgaddress" name="imgaddress" >
                 <script>
                     const File = document.getElementById("imgaddress");
-
                     function convertToBase64(file,address) {
                         const reader = new FileReader();
                         reader.readAsDataURL(file);

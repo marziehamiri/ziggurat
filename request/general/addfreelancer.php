@@ -83,7 +83,7 @@ if (
     $mobile = $db->Real($_POST['mobile']);
     $profileimgname = $db->Real($_POST['profileimgname']);
     $backgroundimgname = $db->Real($_POST['backgroundimgname']);
-    $rand = rand(1, 22222222222222);
+    $rand = rand(1, 22222222);
 
     $picture = mkdir("img_profile/" . $rand);
 //??? ??? ?? ??????

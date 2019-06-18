@@ -628,48 +628,48 @@
             </div>
             </form>
         </div>
-    <?php
-    if(isset($_POST["btnportofilo"])){
-        $nameporto=$_FILES["imgadress"]["name"];
-        $sizeporto=$_FILES["imgadress"]["size"];
-        $typeporto=$_FILES["imgadress"]["type"];
-        $tmpporto=$_FILES["imgadress"]["tmp_name"];
-        if(is_uploaded_file($tmpporto)){
-            $pasvand=array("image/jpg","image/png","image/jpeg");
-            if(in_array($typeporto,$pasvand)){
-                if (move_uploaded_file($tmpporto,"imgportofilo/".$nameporto)){
-                    echo  '<div id="msg">آپلود انجام شد</div>';
-                }else{
-                    echo  '<div id="msg">آپلود انجام نشد</div>';
-                }
-            }else{
-                echo '<div id="msg">شما تنها قادر به آپلود تصویر هستید</div>';
-            }
-        }
-    }else{
-        echo '<div id="msg">فایل آپلودی نیست </div>';
-    }
-    if(isset($_POST["btnportofilo"])){
-        $nameporto1=$_FILES["fileaddress"]["name"];
-        $sizeporto1=$_FILES["fileaddress"]["size"];
-        $typeporto1=$_FILES["fileaddress"]["type"];
-        $tmpporto1=$_FILES["fileaddress"]["tmp_name"];
-        if(is_uploaded_file($tmpporto1)){
-            $pasvand1=array("image/jpg","image/png","image/jpeg");
-            if(in_array($typeporto1,$pasvand1)){
-                if (move_uploaded_file($tmpporto1,"fileportofilo/".$nameporto1)){
-                    echo  '<div id="msg">آپلود انجام شد</div>';
-                }else{
-                    echo  '<div id="msg">آپلود انجام نشد</div>';
-                }
-            }else{
-                echo '<div id="msg">شما تنها قادر به آپلود تصویر هستید</div>';
-            }
-        }
-    }else{
-        echo '<div id="msg">فایل آپلودی نیست </div>';
-    }
-    ?>
+<!--    --><?php
+//    if(isset($_POST["btnportofilo"])){
+//        $nameporto=$_FILES["imgadress"]["name"];
+//        $sizeporto=$_FILES["imgadress"]["size"];
+//        $typeporto=$_FILES["imgadress"]["type"];
+//        $tmpporto=$_FILES["imgadress"]["tmp_name"];
+//        if(is_uploaded_file($tmpporto)){
+//            $pasvand=array("image/jpg","image/png","image/jpeg");
+//            if(in_array($typeporto,$pasvand)){
+//                if (move_uploaded_file($tmpporto,"imgportofilo/".$nameporto)){
+//                    echo  '<div id="msg">آپلود انجام شد</div>';
+//                }else{
+//                    echo  '<div id="msg">آپلود انجام نشد</div>';
+//                }
+//            }else{
+//                echo '<div id="msg">شما تنها قادر به آپلود تصویر هستید</div>';
+//            }
+//        }
+//    }else{
+//        echo '<div id="msg">فایل آپلودی نیست </div>';
+//    }
+//    if(isset($_POST["btnportofilo"])){
+//        $nameporto1=$_FILES["fileaddress"]["name"];
+//        $sizeporto1=$_FILES["fileaddress"]["size"];
+//        $typeporto1=$_FILES["fileaddress"]["type"];
+//        $tmpporto1=$_FILES["fileaddress"]["tmp_name"];
+//        if(is_uploaded_file($tmpporto1)){
+//            $pasvand1=array("image/jpg","image/png","image/jpeg");
+//            if(in_array($typeporto1,$pasvand1)){
+//                if (move_uploaded_file($tmpporto1,"fileportofilo/".$nameporto1)){
+//                    echo  '<div id="msg">آپلود انجام شد</div>';
+//                }else{
+//                    echo  '<div id="msg">آپلود انجام نشد</div>';
+//                }
+//            }else{
+//                echo '<div id="msg">شما تنها قادر به آپلود تصویر هستید</div>';
+//            }
+//        }
+//    }else{
+//        echo '<div id="msg">فایل آپلودی نیست </div>';
+//    }
+//    ?>
         </div>
 
         <script>

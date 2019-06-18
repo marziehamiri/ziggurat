@@ -13,38 +13,42 @@ if (
     &&
     isset($_POST['description'])
     &&
-    isset($_POST['fee'])
-    &&
-    isset($_POST['type'])
-    &&
     isset($_POST['subcat'])
     &&
-    isset($_POST['city_id'])
+    isset($_POST['budget'])
     &&
-    isset($_POST['bold'])
-&&
-    isset($_POST['quick'])
-&&
+    isset($_POST['minbudget'])
+    &&
+    isset($_POST['maxbudget'])
+    &&
+    isset($_POST['mintime'])
+    &&
+    isset($_POST['maxtime'])
+    &&
+    isset($_POST['fee'])
+    &&
+    isset($_POST['minfee'])
+    &&
+    isset($_POST['maxfee'])
+    &&
+    isset($_POST['day'])
+    &&
+    isset($_POST['hour'])
+    &&
+
+
     !empty($_POST['title'])
     &&
     !empty($_POST['description'])
     &&
-    !empty($_POST['fee'])
-    &&
-    !empty($_POST['type'])
-    &&
+
     !empty($_POST['subcat'])
-    &&
-    !empty($_POST['city_id'])
+
 ) {
     $title = $db->Real(($_POST['title']));
     $description = $db->Real(($_POST['description']));
-    $fee=$db->Real(($_POST['fee']));
-    $type = $db->Real(($_POST['type']));
     $subcat = $db->Real(($_POST['subcat']));
-    $city_id = $db->Real(($_POST['city_id']));
-    $bold = $db->Real(($_POST['bold']));
-    $quick = $db->Real(($_POST['quick']));
+
     session_start();
     if( isset($_SESSION["login"]) && $_SESSION["login"]==true ) {
         $employer_id = $_SESSION["submitid"];

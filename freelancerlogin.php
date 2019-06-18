@@ -623,7 +623,7 @@
                 <input type="file" class="form-control" id="fileaddress" name="fileaddress" disabled>
         </div>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
-                <button type="button" name="btnportofilo" onclick="portofiloo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
+                <button type="submit" name="btnportofilo" onclick="portofiloo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
                 <button type="button" class="btn btn-danger" onclick="canclebtn()" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
             </div>
             </form>
@@ -649,56 +649,63 @@
     }else{
         echo '<div id="msg">فایل آپلودی نیست </div>';
     }
+    if(isset($_POST["btnportofilo"])){
+        $nameporto1=$_FILES["fileaddress"]["name"];
+        $sizeporto1=$_FILES["fileaddress"]["size"];
+        $typeporto1=$_FILES["fileaddress"]["type"];
+        $tmpporto1=$_FILES["fileaddress"]["tmp_name"];
+        if(is_uploaded_file($tmpporto1)){
+            $pasvand1=array("image/jpg","image/png","image/jpeg");
+            if(in_array($typeporto1,$pasvand1)){
+                if (move_uploaded_file($tmpporto1,"fileportofilo/".$nameporto1)){
+                    echo  '<div id="msg">آپلود انجام شد</div>';
+                }else{
+                    echo  '<div id="msg">آپلود انجام نشد</div>';
+                }
+            }else{
+                echo '<div id="msg">شما تنها قادر به آپلود تصویر هستید</div>';
+            }
+        }
+    }else{
+        echo '<div id="msg">فایل آپلودی نیست </div>';
+    }
     ?>
         </div>
-    </div>
-<!--        <script>-->
-<!--            function portofiloo() {-->
-<!--                var titleportofilo = $("#titleportofilo").val();-->
-<!--                var skill = $("#skill").val();-->
-<!--                var year = $("#year").val();-->
-<!--                var timeportofilo = $("#timeportofilo").val();-->
-<!--                var descriptionp = $("#descriptionp").val();-->
-<!---->
-<!--                const File = document.getElementById("imgaddress");-->
-<!--                function convertToBase64(file,address) {-->
-<!--                    var fileName = e. target. files[0]. name;-->
-<!--                    const reader = new FileReader();-->
-<!--                    reader.readAsDataURL(file);-->
-<!--                    let Base64 = '';-->
-<!---->
-<!--                var freeportofilo=document.getElementById("freeportofilo");-->
-<!--                    reader.onload = function() {-->
-<!--                $.ajax({-->
-<!--                    url: 'request/general/addportofilo.php',-->
-<!--                    data: {-->
-<!--                        titleportofilo: titleportofilo,-->
-<!--                        skill: skill,-->
-<!--                        year: year,-->
-<!--                        time: timeportofilo,-->
-<!--                        descriptionp : descriptionp,-->
-<!--                        img64: reader.result,-->
-<!--                        imgname: fileName,-->
-<!---->
-<!--                    },-->
-<!--                    dataType: 'json',-->
-<!--                    type: 'POST',-->
-<!--                    success: function (data) {-->
-<!--                        $("#portofilo").append(data['resultsportofilo']);-->
-<!--                        document.getElementById("freeportofilo").style.display="none";-->
-<!--                    }-->
-<!--                });-->
-<!---->
-<!--                    reader.onerror = function(e) {-->
-<!--                        console.log("error: ", e);-->
-<!--                    };-->
-<!--                    }-->
-<!--                File.addEventListener("change", () => {-->
-<!--                    // console.log("r: ", r);-->
-<!--                    convertToBase64(File.files[0],'request/general/addportofilo.php');-->
-<!--                });-->
-<!--            }-->
-<!--        </script>-->
+
+        <script>
+            function portofiloo() {
+                var titleportofilo = $("#titleportofilo").val();
+                var skill = $("#skill").val();
+                var year = $("#year").val();
+                var timeportofilo = $("#timeportofilo").val();
+                var descriptionp = $("#descriptionp").val();
+
+
+                var freeportofilo=document.getElementById("freeportofilo");
+
+                $.ajax({
+                    url: 'request/general/addportofilo.php',
+                    data: {
+                        titleportofilo: titleportofilo,
+                        skill: skill,
+                        year: year,
+                        time: timeportofilo,
+                        descriptionp : descriptionp,
+
+
+                    },
+                    dataType: 'json',
+                    type: 'POST',
+                    success: function (data) {
+                        $("#portofilo").append(data['resultsportofilo']);
+                        document.getElementById("freeportofilo").style.display="none";
+                    }
+                });
+
+
+
+            }
+        </script>
     <!--tamayol-->
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="margin: 3% 0">
         <h4 style="margin: 2% 0">تمايل به انجام چه پروژه هايي داريد؟

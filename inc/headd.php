@@ -48,10 +48,10 @@
     </div>
     <!--search-->
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="margin-top:2%;font-size: 24px;direction: rtl;padding: 0">
-        <i class="fas fa-search animated bounceInRight" onclick="showsearch()" id="showsearchi" style="float: left;
+        <i class="fas fa-search" onclick="showsearch()" id="showsearchi" style="float: left;
     margin-top: 4%;
     color: #62565b;text-align: center"></i>
-        <div id="showsearch" class="animated zoomIn" style=";display: none">
+        <div id="showsearch"  style=";display: none">
             <div id="showsearch" class="dropdown1" style="margin-top: 2%;width: 100%;height: 40px;background-color: #2196F3">
                 <a href="specialists.php">
             <i class="fas fa-search" style="cursor: pointer;margin: 2%;color: #ffffff;;font-size: 20px;float:left " onclick="myFunction()"></i>
@@ -134,7 +134,7 @@
 
 
     </script>
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 animated zoomIn" onclick="brandheader()" style="text-align: center;margin-top: 1%;margin-bottom: 1%">
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 " onclick="brandheader()" style="text-align: center;margin-top: 1%;margin-bottom: 1%">
         <img src="img/Logoart.png">
     </div>
 

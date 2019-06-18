@@ -635,7 +635,7 @@
         $typeporto=$_FILES["imgadress"]["type"];
         $tmpporto=$_FILES["imgadress"]["tmp_name"];
         if(is_uploaded_file($tmpporto)){
-            $pasvand=array(("image/jpg","image/png","image/jpeg",));
+            $pasvand=array("image/jpg","image/png","image/jpeg");
             if(in_array($typeporto,$pasvand)){
                 if (move_uploaded_file($tmpporto,"imgportofilo/".$nameporto)){
                     echo  '<div id="msg">آپلود انجام شد</div>';
@@ -645,9 +645,9 @@
             }else{
                 echo '<div id="msg">شما تنها قادر به آپلود تصویر هستید</div>';
             }
-        }else{
-            echo '<div id="msg">فایل آپلودی </div>';
         }
+    }else{
+        echo '<div id="msg">فایل آپلودی نیست </div>';
     }
     ?>
         </div>

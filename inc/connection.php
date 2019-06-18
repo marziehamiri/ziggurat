@@ -64,5 +64,16 @@ class connection
         file_put_contents($file, $data);
     }
 
+    function sendsms($tell,$code){
 
+        $client = new SoapClient("http://37.130.202.188/class/sms/wsdlservice/server.php?wsdl");
+        $user = "amlak300";
+        $pass = "amir5621";
+        $fromNum = "+985000958";
+        $toNum = $tell;
+        $pattern_code = "128";
+        $input_data = array("name"=>" زیگورات","verification-code"=>$code,);
+        $client -> sendPatternSms($fromNum,$toNum,$user,$pass,$pattern_code,$input_data);
+
+    }
 }

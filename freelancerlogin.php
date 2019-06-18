@@ -599,44 +599,15 @@
 
 
                 <!--upload-->
-                <label for="pwd">آپلود عکس نمونه کار</label>
-                <i class="fas fa-info-circle" data-toggle="tooltip" title="فرمت های مورد قبول تصاوير:  jpg، jpeg، gif و png  و حداکثر حجم هر فايل: 10 مگابايت
+                <form method="post" enctype="multipart/form-data" name="form1" id="form1" action="">
+
+                    <label for="pwd">آپلود عکس نمونه کار</label>
+                    <i class="fas fa-info-circle" data-toggle="tooltip" title="فرمت های مورد قبول تصاوير:  jpg، jpeg، gif و png  و حداکثر حجم هر فايل: 10 مگابايت
 حداقل و حداکثر رزولوشن مورد قبول برای هر تصويربه ترتيب
  xxxx*yyyy پيکسل و xxxx*yyyy
  پيکسل مي باشد." style="color: red;direction: rtl" ></i>
-                <input type="file" class="form-control" id="imgaddress" name="imgaddress" onchange="convertToBase64()">
-<!--                <script>-->
-<!--                    const File = document.getElementById("imgaddress");-->
-<!--                    function convertToBase64(file,address) {-->
-<!--                        var fileName = e. target. files[0]. name;-->
-<!--                        const reader = new FileReader();-->
-<!--                        reader.readAsDataURL(file);-->
-<!--                        let Base64 = '';-->
-<!--                        reader.onload = function() {-->
-<!--                            $.ajax({-->
-<!--                                url: 'request/general/addportofilo.php',-->
-<!--                                data: {-->
-<!--                                    img64: reader.result,-->
-<!--                                    imgname: fileName,-->
-<!---->
-<!--                                },-->
-<!--                                dataType: 'json',-->
-<!--                                type: 'POST',-->
-<!--                                success: function (data) {-->
-<!--                                    $("#portofilo").append(data['resultsportofilo']);-->
-<!--                                    document.getElementById("freeportofilo").style.display="none";-->
-<!--                                }-->
-<!--                            });-->
-<!--                        };-->
-<!--                        reader.onerror = function(e) {-->
-<!--                            console.log("error: ", e);-->
-<!--                        };-->
-<!--                    }-->
-<!--                    File.addEventListener("change", () => {-->
-<!--                        // console.log("r: ", r);-->
-<!--                        convertToBase64(File.files[0],'request/general/addportofilo.php');-->
-<!--                    });-->
-<!--                </script>-->
+                    <input type="file" class="form-control" id="imgaddress" name="imgaddress" onchange="convertToBase64()">
+
                 <!--upload-->
 
         </div>
@@ -652,59 +623,82 @@
                 <input type="file" class="form-control" id="fileaddress" name="fileaddress" disabled>
         </div>
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin: 2%">
-                <button type="button" onclick="portofiloo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
+                <button type="button" name="btnportofilo" onclick="portofiloo()" class="btn btn-success" style="width: 22%;text-align:center;">ذخیره</button>
                 <button type="button" class="btn btn-danger" onclick="canclebtn()" style="width: 22%;margin-right: 26%;text-align:center;">لغو</button>
             </div>
-
+            </form>
+        </div>
+    <?php
+    if(isset($_POST["btnportofilo"])){
+        $nameporto=$_FILES["imgadress"]["name"];
+        $sizeporto=$_FILES["imgadress"]["size"];
+        $typeporto=$_FILES["imgadress"]["type"];
+        $tmpporto=$_FILES["imgadress"]["tmp_name"];
+        if(is_uploaded_file($tmpporto)){
+            $pasvand=array(("image/jpg","image/png","image/jpeg",));
+            if(in_array($typeporto,$pasvand)){
+                if (move_uploaded_file($tmpporto,"imgportofilo/".$nameporto)){
+                    echo  '<div id="msg">آپلود انجام شد</div>';
+                }else{
+                    echo  '<div id="msg">آپلود انجام نشد</div>';
+                }
+            }else{
+                echo '<div id="msg">شما تنها قادر به آپلود تصویر هستید</div>';
+            }
+        }else{
+            echo '<div id="msg">فایل آپلودی </div>';
+        }
+    }
+    ?>
         </div>
     </div>
-        <script>
-            function portofiloo() {
-                var titleportofilo = $("#titleportofilo").val();
-                var skill = $("#skill").val();
-                var year = $("#year").val();
-                var timeportofilo = $("#timeportofilo").val();
-                var descriptionp = $("#descriptionp").val();
-
-                const File = document.getElementById("imgaddress");
-                function convertToBase64(file,address) {
-                    var fileName = e. target. files[0]. name;
-                    const reader = new FileReader();
-                    reader.readAsDataURL(file);
-                    let Base64 = '';
-
-                var freeportofilo=document.getElementById("freeportofilo");
-                    reader.onload = function() {
-                $.ajax({
-                    url: 'request/general/addportofilo.php',
-                    data: {
-                        titleportofilo: titleportofilo,
-                        skill: skill,
-                        year: year,
-                        time: timeportofilo,
-                        descriptionp : descriptionp,
-                        img64: reader.result,
-                        imgname: fileName,
-
-                    },
-                    dataType: 'json',
-                    type: 'POST',
-                    success: function (data) {
-                        $("#portofilo").append(data['resultsportofilo']);
-                        document.getElementById("freeportofilo").style.display="none";
-                    }
-                });
-
-                    reader.onerror = function(e) {
-                        console.log("error: ", e);
-                    };
-                    }
-                File.addEventListener("change", () => {
-                    // console.log("r: ", r);
-                    convertToBase64(File.files[0],'request/general/addportofilo.php');
-                });
-            }
-        </script>
+<!--        <script>-->
+<!--            function portofiloo() {-->
+<!--                var titleportofilo = $("#titleportofilo").val();-->
+<!--                var skill = $("#skill").val();-->
+<!--                var year = $("#year").val();-->
+<!--                var timeportofilo = $("#timeportofilo").val();-->
+<!--                var descriptionp = $("#descriptionp").val();-->
+<!---->
+<!--                const File = document.getElementById("imgaddress");-->
+<!--                function convertToBase64(file,address) {-->
+<!--                    var fileName = e. target. files[0]. name;-->
+<!--                    const reader = new FileReader();-->
+<!--                    reader.readAsDataURL(file);-->
+<!--                    let Base64 = '';-->
+<!---->
+<!--                var freeportofilo=document.getElementById("freeportofilo");-->
+<!--                    reader.onload = function() {-->
+<!--                $.ajax({-->
+<!--                    url: 'request/general/addportofilo.php',-->
+<!--                    data: {-->
+<!--                        titleportofilo: titleportofilo,-->
+<!--                        skill: skill,-->
+<!--                        year: year,-->
+<!--                        time: timeportofilo,-->
+<!--                        descriptionp : descriptionp,-->
+<!--                        img64: reader.result,-->
+<!--                        imgname: fileName,-->
+<!---->
+<!--                    },-->
+<!--                    dataType: 'json',-->
+<!--                    type: 'POST',-->
+<!--                    success: function (data) {-->
+<!--                        $("#portofilo").append(data['resultsportofilo']);-->
+<!--                        document.getElementById("freeportofilo").style.display="none";-->
+<!--                    }-->
+<!--                });-->
+<!---->
+<!--                    reader.onerror = function(e) {-->
+<!--                        console.log("error: ", e);-->
+<!--                    };-->
+<!--                    }-->
+<!--                File.addEventListener("change", () => {-->
+<!--                    // console.log("r: ", r);-->
+<!--                    convertToBase64(File.files[0],'request/general/addportofilo.php');-->
+<!--                });-->
+<!--            }-->
+<!--        </script>-->
     <!--tamayol-->
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="margin: 3% 0">
         <h4 style="margin: 2% 0">تمايل به انجام چه پروژه هايي داريد؟
@@ -802,7 +796,7 @@
                         <a href="">
                             <button id="final1" type="button" onclick="checkcode()"  class="btn btn-success" data-dismiss="modal1" data-toggle="modal" data-target="#myModal12">تایید کد </button>
 
-                            <button id="final" type="submit" style="display: none" class="btn btn-success" data-dismiss="modal1" data-toggle="modal" data-target="#myModal12">ثبت پروفایل </button>
+                            <button id="final" name="final" type="submit" style="display: none" class="btn btn-success" data-dismiss="modal1" data-toggle="modal" data-target="#myModal12">ثبت پروفایل </button>
                         </a>
                     </div>
                 </div>

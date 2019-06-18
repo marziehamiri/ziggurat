@@ -83,31 +83,37 @@ if (
     $mobile = $db->Real($_POST['mobile']);
     $profileimgname = $db->Real($_POST['profileimgname']);
     $backgroundimgname = $db->Real($_POST['backgroundimgname']);
-    $rand = rand(1, 22222222);
-
-    $picture = mkdir("img_profile/" . $rand);
-//??? ??? ?? ??????
-    $picture = $_FILES[ $profileimgname]['name'];
-//???? ??? ?? ??????
-    $exp = explode(".", $picture);
-    $end = end($exp);
-//?? ??? ???? ?? ??? ????
-    $new_name = rand() . "." . $end;
-// ??? ?? ?? cache ?? ????? uploader ???????
-    $from = $_FILES[ $profileimgname]['tmp_name'];
-    $to = "img_profile/" . $rand . "/" . $new_name;
-    move_uploaded_file($from, $to);
 
     session_start();
+    $nameimg=$_FILES[$profileimgname]["name"];
+    $tmpimg=$_FILES[$profileimgname]["tmp_name"];
+    $typeimg=$_FILES[$profileimgname]["type"];
+    if(is_uploaded_file($tmpimg)){
+$pasvand=array("image/jpg","image/png","image/jpeg");
+if(in_array($typeimg,$pasvand)){
+if (move_uploaded_file($tmpimg,"img_portofilo/".$nameimg)){
+    echo '<div>آپلود انجام شد</div> ';
+}else{
+    echo '<div>آپلود انجام نشد</div> ';
+}
+}else{
+    echo '<div>شما تنها قادر به آپلود تصویر هستید</div> ';
+}
+    }else{
+        echo '<div>آپلودی نمیباشد</div> ';
+    }
+
+
+
     if( isset($_SESSION["login"]) && $_SESSION["login"]==true ) {
         $freelancerid = $_SESSION["submitid"];
         $id = $db->Gid();
 
 
         $insert = mysqli_query($db->connect(),"INSERT INTO gallery (id, img_address, freelancer_id, employer_id, freeco_id, empco_id) VALUES
-                                                                                              ( '$id','$to','$freelancerid','','','' )");
+                                                                                              ( '$id','$nameimg','$freelancerid','','','' )");
     }
-session_start();
+
     if( isset($_SESSION["login"]) && $_SESSION["login"]==true ) {
         $freelancerid= $_SESSION["submitid"];
         $select = mysqli_query($db->connect(),"SELECT * from submit where id=$freelancerid");

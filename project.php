@@ -2405,7 +2405,7 @@
                                                         
                                                         <div style="padding: 0 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                           '.$results23["matchtime"].'تومان
+                                                           '.$results23["matchtime"].'   تومان  
                                                         </div>
                                                       
                                                         ';
@@ -2424,7 +2424,7 @@
                                                         
                                                         <div style="padding: 0 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                           '.$results24["feegarantee"].'تومان
+                                                           '.$results24["feegarantee"].'   تومان  
                                                         </div>
                                                       
                                                         ';
@@ -2696,7 +2696,7 @@
                                                         
                                                         <div style="padding: 0 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                           '.$results25["matchtime"].'تومان
+                                                           '.$results25["matchtime"].'تومان  
                                                         </div>
                                                       
                                                         ';
@@ -2715,7 +2715,7 @@
                                                         
                                                         <div style="padding: 0 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                           '.$results26["feegarantee"].'تومان
+                                                           '.$results26["feegarantee"].'تومان  
                                                         </div>
                                                       
                                                         ';

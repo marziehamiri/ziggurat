@@ -70,15 +70,14 @@
     <br>
     <br>
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-    <a href="howwork.php#tab4">
-    <h4 id="div2titr1" style="float: right;width: 50%;color: #ED7D31;text-align: right;direction: rtl">چنانچه کارفرما (درخواست دهنده انجام یک سرویس) می باشید:
+         <a href="howwork.php#tab4">
+    <label id="div2titr1" style="float: right;color: #ED7D31;text-align: right;direction: rtl;font-size: 20px"> چنانچه کارفرما (درخواست دهنده انجام یک سرویس) می باشید:&nbsp;&nbsp;&nbsp;&nbsp;
 
-    </h4>
+    </label>
     </a>
-    <a href="#div2">
-        <b id="addrowmore1" onclick="addrowmore1()" style="display: none;width: 7%;
-    float: right;
-    line-height: 3;;color: #00aeef;direction: rtl">اضافه...</b>
+
+    <a href="#div2titr1">
+        <label id="addrowmore1" onclick="addrowmore1()" style="display: none;float: right;;color: #00aeef;direction: rtl">بیشتر +</label>
 
     </a></div>
     <!--web-->
@@ -183,7 +182,7 @@
     <!--mobile-->
 
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12"  >
-    <a href="#div2web1">
+    <a href="#div2titr1">
         <h4 onclick="addrow1()" id="more1"  style="display: block;text-align: center;color: #00aeef;margin: 4%;direction: rtl">بیشتر...</h4>
     </a>
 
@@ -195,12 +194,11 @@
     <!--web1-->
     <div class="col-md-12 col-lg-12 hidden-sm hidden-xs myClass"  >
         <a href="howwork.php#tab5">
-            <h4 id="div2webtitr1" style="float: right;width: 50%;color: #ED7D31;text-align: right;direction: rtl;display: none">چنانچه پیمانکار (فریلنسر، مجری یا انجام دهنده یک سرویس) می باشید:</h4>
+            <label id="div2webtitr1" style="float: right;color: #ED7D31;text-align: right;direction: rtl;display: none;font-size: 20px"> پیمانکار (فریلنسر، مجری یا انجام دهنده یک سرویس) می باشید:&nbsp;&nbsp;</label>
         </a>
-        <a href="#div2web1" >
-            <b id="addrowmore2" onclick="addrowmore2()" style="display: none;width: 7%;
-    float: right;
-    line-height: 3;;color: #00aeef;direction: rtl">اضافه...</b>
+        <a href="#div2titr1" >
+            <label id="addrowmore2" onclick="addrowmore2()" style="display: none;
+    float: right;color: #00aeef;direction: rtl">بیشتر +</label>
 
         </a>
     <div class="col-md-12 col-lg-12 hidden-sm hidden-xs myClass" id="div2web1"
@@ -226,7 +224,7 @@
         </div>
         <div class="col-md-2 col-lg-2 div2">
             <a href="#">
-                <p  style="font-size: 13px">پیشنهاد قیمت و زمان انجام پروژه</p>
+                <p  style="">پیشنهاد قیمت و زمان انجام پروژه</p>
                 <img src="img/free3.png" class="imgdiv2 " style="">
             </a>
         </div>
@@ -243,7 +241,7 @@
             </a>
         </div>
         <div class="col-md-12 col-lg-12 ">
-            <a href="#div2web2"><h4 id="more2web2" onclick="addrow2web2()" style="direction: rtl;text-align: center;color: #00aeef;margin: 4%;">بیشتر...</h4></a>
+            <a href="#div2titr1"><h4 id="more2web2" onclick="addrow2web2()" style="direction: rtl;text-align: center;color: #00aeef;margin: 4%;">بیشتر...</h4></a>
         </div>
     </div>
     </div>
@@ -251,12 +249,11 @@
     <!--mobile1-->
     <div class="col-sm-12 col-xs-12 hidden-md hidden-lg myClass"  >
         <a href="howwork.php#tab5">
-            <h4 id="div2mobiletitr2" style="float: right;width: 50%;color: #ED7D31;text-align: right;direction: rtl;display: none">چنانچه پیمانکار (فریلنسر، مجری یا انجام دهنده یک سرویس) می باشید:</h4>
+            <label id="div2mobiletitr2" style="float: right;color: #ED7D31;text-align: right;direction: rtl;display: none;font-size: 20px">چنانچه پیمانکار (فریلنسر، مجری یا انجام دهنده یک سرویس) می باشید: &nbsp;&nbsp;</label>
         </a>
         <a href="#div2web1" >
-            <b id="addrowmore22" onclick="addrowmore22()" style="display: none;width: 7%;
-    float: right;
-    line-height: 3;;color: #00aeef;direction: rtl">اضافه...</b>
+            <label id="addrowmore22" onclick="addrowmore22()" style="display: none;
+    float: right;color: #00aeef;direction: rtl">بیشتر +</label>
 
         </a>
     <div class="col-sm-12 col-xs-12 hidden-md hidden-lg myClass1" id="div2mobile1"
@@ -314,7 +311,7 @@
             </a>
         </div>
         <div class="col-md-12 col-lg-12 ">
-            <a href="#div2mobile2"><h4 id="more2mobile2" onclick="addrow2mobile2()" style="text-align: center;color: #00aeef;margin: 4%;">بیشتر...</h4></a>
+            <a href="#div2titr1"><h4 id="more2mobile2" onclick="addrow2mobile2()" style="text-align: center;color: #00aeef;margin: 4%;">بیشتر...</h4></a>
         </div>
     </div></div>
 
@@ -326,8 +323,8 @@
     <!--web2-->
     <div id="div2web2" class="col-md-12 col-lg-12 hidden-xs hidden-sm myClass" style=";margin-bottom: 2%;display: none" >
         <a href="BuySell.php">
-            <h4 style="float: right;width: 50%;color: #ED7D31;text-align: right;direction: rtl" >چنانچه بازاریاب می باشید و قصد دارید کسب درآمد نمایید:
-            </h4>
+            <label style="float: right;color: #ED7D31;text-align: right;direction: rtl;font-size: 20px" >  بازاریاب می باشید و قصد دارید کسب درآمد نمایید:  &nbsp;&nbsp;
+            </label>
         </a>
 
         <div class="col-md-2 col-lg-2  div2" style="margin-top: 3%;">
@@ -348,9 +345,9 @@
                 <img src="img/market4.png" class="imgdiv2">
             </a>
         </div>
-        <div class="col-md-2 col-lg-2  div2">
+        <div class="col-md-2 col-lg-2  div2" style="margin-top: 3%">
             <a href="#">
-                <p style="font-size: 13px">دریافت لینکهای بازاریابی و دعوت </p>
+                <p style="">دریافت لینکهای بازاریابی و دعوت </p>
                 <img src="img/market3.png" class="imgdiv2" style="">
             </a>
         </div>
@@ -366,14 +363,18 @@
                 <img src="img/work1.png" class="imgdiv2">
             </a>
         </div>
+        <div class="col-md-12 col-lg-12" style="text-align: center">
+        <a id="moreadd" href="howwork.php"><button class="btn btn-success"
+                                                   style="background-color: #2196F3;border-color: #2196F3;margin: 2%;border-radius: 10px">
+                در مورد روش کار و سوالات متداول بیشتر بدانید
+            </button> </a></div>
     </div>
     <!--web2-->
     <!--mobile2-->
     <div id="div2mobile2" class="col-sm-12 col-xs-12 hidden-md hidden-lg myClass1"
          style="margin-top: 2%;margin-bottom: 2%;display: none" >
         <a href="BuySell.php">
-            <h4 id="div2titr3" style="float: right;width: 50%;color: #ED7D31;text-align: right;direction: rtl" >چنانچه بازاریاب می باشید و قصد دارید کسب درآمد نمایید:
-            </h4>
+            <label id="div2titr3" style="float: right;font-size: 20px;color: #ED7D31;text-align: right;direction: rtl" >چنانچه بازاریاب می باشید و قصد دارید کسب درآمد نمایید: &nbsp;&nbsp;</label>
         </a>
         <div class="col-xs-12 col-sm-12 div2-1" >
             <a href="#">
@@ -427,13 +428,14 @@
                 </div>
             </a>
         </div>
+        <a id="moreadd" href="howwork.php"><button class="btn btn-success"
+                                                   style="background-color: #2196F3;border-color: #2196F3;margin: 2%;border-radius: 10px">
+                در مورد روش کار و سوالات متداول بیشتر بدانید
+            </button> </a>
     </div>
 
     <!--mobile2-->
-    <a id="moreadd" href="howwork.php"><button class="btn btn-success"
-                        style="background-color: #2196F3;border-color: #2196F3;margin: 2%;border-radius: 10px">
-        در مورد روش کار و سوالات متداول بیشتر بدانید
-    </button> </a>
+
 </div>
 
 <!--div2-->
@@ -577,7 +579,7 @@
         </div>
     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="text-align: center;margin-top: 6%">
         <a href="projectmenu.php">
-            <button class="btn btn-success" style="background-color: #2196F3;margin-bottom: 4%;border-radius: 5px;width: 245px;">نمایش همه پروژه های باز</button>
+            <button class="btn btn-success" style="    border-color: #2196f3;background-color: #2196F3;margin-bottom: 4%;border-radius: 5px;width: 245px;">نمایش همه پروژه های باز</button>
         </a>
     </div>
 
@@ -587,8 +589,11 @@
 <!--div5-->
 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="background-color: whitesmoke" >
     <div class="container" style="text-align: center">
+        <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+
         <img src="img/stars.png">
 <hr style="border: 1px solid #999797;">
+        </div>
     <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6" style="text-align: center;margin-left: 10%;margin-top: 5%">
 <h4>گارانتی بازگشت وجه</h4>
         <br>
@@ -616,8 +621,11 @@
             <img src="img/zemanatbrand(1).png" id="image333" style="display: none" onmouseleave="hoverbrand333()">
 
         </div>
-        <hr style="border: 1px solid #999797;width: 30%">
-        <img src="img/star1.png">
+<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+    <hr style="border: 1px solid #999797;width: 30%">
+    <img src="img/star1.png">
+</div>
+
 
 
     </div>
@@ -655,7 +663,7 @@
 
 
                     echo '
-                          <button class="btn btn-success" style="background-color: #009900;position: absolute;right:3%;bottom: 3%">مشاهده پروفایل</button>
+                          <button class="btn btn-success" style=" border-color: #00aeef;; background-color: #00aeef;;position: absolute;right:3%;bottom: 3%">مشاهده پروفایل</button>
                           ';
 
                     echo '</div>';

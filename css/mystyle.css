@@ -19,6 +19,7 @@ scroll-behavior: smooth;
     float: left;
     margin-left:7%;
     color: #5d5656;
+    font-size: 16px;
 }
 .navbar-inverse {
     background-color: #00aeef;
@@ -73,6 +74,9 @@ box-shadow:inset 0 -4px 0px 0px #dfe2f0, 0 10px 20px 0px rgba(0, 0, 0, 0.25)
 }
 .myClass1 .div2-1:last-child{
     background: #ffffff;
+}
+.myClass .div2 >a >p{
+    font-size: 20px;
 }
 .div2-1 p{
     line-height: 6;

@@ -606,32 +606,188 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
-                                                         style="padding: 0;margin-bottom: 3%">
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;text-align: left">12،000 تومان
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                        <?php
+                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query23 = mysqli_query($db->connect(), $sql23);
+                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results23["private"].' تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;">پروژه خصوصی
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
-                                                         style="padding: 0;margin-bottom: 3%">
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;text-align:left">12،000 تومان
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="secretproject">
+                                                        <?php
+                                                        $sql24= "SELECT * FROM cost order by ID DESC ";
+                                                        $query24 = mysqli_query($db->connect(), $sql24);
+                                                        $results24 = mysqli_fetch_assoc($query24);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results24["secret"].' تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;">پروژه محرمانه
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
-                                                         style="padding: 0;margin-bottom: 3%">
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;text-align:left">12،000 تومان
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="boldproject">
+                                                        <?php
+                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query23 = mysqli_query($db->connect(), $sql23);
+                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results23["private"].' تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;">پروژه برجسته
+                                                             style="padding: 0;">پروژه خصوصی
                                                         </div>
                                                     </div>
+
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                        <?php
+                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query23 = mysqli_query($db->connect(), $sql23);
+                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results23["private"].' تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                                        ?>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;">پروژه خصوصی
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                        <?php
+                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query23 = mysqli_query($db->connect(), $sql23);
+                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results23["private"].' تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                                        ?>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;">پروژه خصوصی
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                        <?php
+                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query23 = mysqli_query($db->connect(), $sql23);
+                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results23["private"].' تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                                        ?>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;">پروژه خصوصی
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                        <?php
+                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query23 = mysqli_query($db->connect(), $sql23);
+                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results23["private"].' تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                                        ?>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;">پروژه خصوصی
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                        <?php
+                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query23 = mysqli_query($db->connect(), $sql23);
+                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results23["private"].' تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                                        ?>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;">پروژه خصوصی
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                        <?php
+                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query23 = mysqli_query($db->connect(), $sql23);
+                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results23["private"].' تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                                        ?>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;">پروژه خصوصی
+                                                        </div>
+                                                    </div>
+
+
+
+
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
                                                          style="padding: 0;margin-bottom: 3%">
                                                         <hr style="border-top: 1px solid darkgray;">
@@ -1187,7 +1343,7 @@
                                                         
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                           '.$results9["recrutment"].'
+                                                           '.$results9["recruitment"].'
                                                             تومان
                                                         </div>
                                                       
@@ -2045,7 +2201,7 @@
                                                         
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                           '.$results20["recrutment"].'
+                                                           '.$results20["recruitment"].'
                                                             تومان
                                                         </div>
                                                       

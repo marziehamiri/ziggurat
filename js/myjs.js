@@ -968,15 +968,21 @@ function proproject1() {
     document.getElementById("pproject1").style.display="none";
 }function proproject01() {
     var pripro01=document.getElementById("pripro01");
+    var privateproject=document.getElementById("privateproject");
     $("#pripro01").css("background"," #dcdcdc");
     document.getElementById("pproject01").style.display="none";
     document.getElementById("pproject101").style.display="block";
+    document.getElementById("privateproject").style.display="block";
+
 }
 function proproject101() {
     var pripro01=document.getElementById("pripro01");
     $("#pripro01").css("background"," #ffffff");
     document.getElementById("pproject01").style.display="block";
     document.getElementById("pproject101").style.display="none";
+    document.getElementById("privateproject").style.display="none";
+
+
 }
 function secretproject() {
     var secret=document.getElementById("secret");

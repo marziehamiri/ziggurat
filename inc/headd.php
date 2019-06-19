@@ -68,8 +68,8 @@
     float: left;
     padding: 1%;" onclick="myFunction()"></i>
                 </a>
-                <input type="search" class="form-control "  placeholder="جستجوی پروژه ها و متخصصین" id="myInput" onkeypress="searchslil()" onkeyup="filterFunction()"
-                       style="width: 89%;direction: rtl;">
+                <input type="search" class="form-control placeholder1"   placeholder="جستجوی پروژه ها و متخصصین" id="myInput" onkeypress="searchslil()" onkeyup="filterFunction()"
+                       style="width: 89%;direction: rtl;background: #2196F3">
 
 <!--            <i class="fas  fa-sort-down" style="margin-top: 2%;cursor: pointer;font-size: 18px;color: #ffffff;margin: 2%;float: right" onclick="sortdown()"></i>-->
             <div id="display" style="display: none;position: absolute;width: 100%">

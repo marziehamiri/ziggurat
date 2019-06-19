@@ -739,7 +739,6 @@
                                                     </div>
                                                     <!-- 1 -->
                                                     <!-- 2 -->
-
                                                     <div id="pripro01"
                                                          style="margin-left: 1%;padding:2% 0;border: 1px solid #bfbfbf;border-radius: 5px;margin-bottom: 2%"
                                                          class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -758,11 +757,20 @@
 
 
                                                         </div>
+                                                    <?php
+                                                    $sql1 = "SELECT * FROM cost order by ID DESC ";
+                                                    $query1 = mysqli_query($db->connect(), $sql1);
+                                                    $results1 = mysqli_fetch_assoc($query1);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results1["private"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -779,10 +787,10 @@
                                                             <img src="img/NewProject8.png">
                                                         </div>
                                                     </div>
-
                                                     <!-- 2 -->
-                                                    <!-- 3 -->
 
+
+                                                    <!-- 3 -->
                                                     <div id="secret01"
                                                          style="margin-left: 1%;padding:2% 0;border: 1px solid #bfbfbf;border-radius: 5px;margin-bottom: 2%"
                                                          class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -800,11 +808,20 @@
                                                                 شده
                                                             </button>
                                                         </div>
+                                                        <?php
+                                                        $sql2 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query2 = mysqli_query($db->connect(), $sql2);
+                                                        $results2 = mysqli_fetch_assoc($query2);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results2["secret"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -817,11 +834,8 @@
                                                             <img src="img/NewProject9.png">
                                                         </div>
                                                     </div>
-
-
                                                     <!-- 3 -->
                                                     <!-- 4 -->
-
                                                     <div id="bold01"
                                                          style="margin-left: 1%;padding:2% 0;border: 1px solid #bfbfbf;border-radius: 5px;margin-bottom: 2%"
                                                          class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -840,11 +854,20 @@
                                                                 اضافه شده
                                                             </button>
                                                         </div>
+                                                        <?php
+                                                        $sql3 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query3 = mysqli_query($db->connect(), $sql3);
+                                                        $results3 = mysqli_fetch_assoc($query3);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results3["bold"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -861,10 +884,8 @@
                                                             <img src="img/NewProject10.png">
                                                         </div>
                                                     </div>
-
                                                     <!-- 4 -->
                                                     <!-- 5 -->
-
                                                     <div id="quick01"
                                                          style="margin-left: 1%;padding:2% 0;border: 1px solid #bfbfbf;border-radius: 5px;margin-bottom: 2%"
                                                          class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -877,11 +898,20 @@
                                                                 اضافه شود
                                                             </button>
                                                         </div>
+                                                        <?php
+                                                        $sql4 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query4= mysqli_query($db->connect(), $sql4);
+                                                        $results4= mysqli_fetch_assoc($query4);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results4["fast"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -895,10 +925,8 @@
                                                             <img src="img/NewProject11.png">
                                                         </div>
                                                     </div>
-
                                                     <!-- 5 -->
                                                     <!-- 5-1 -->
-
                                                     <div id="quick101"
                                                          style="margin-left: 1%;padding:2% 0;border: 1px solid #bfbfbf;border-radius: 5px;margin-bottom: 2%;background-color: #dcdcdc;display: none"
                                                          class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -911,11 +939,20 @@
                                                                 اضافه شده
                                                             </button>
                                                         </div>
+                                                        <?php
+                                                        $sql5 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query5= mysqli_query($db->connect(), $sql5);
+                                                        $results5= mysqli_fetch_assoc($query5);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results5["fast"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -939,10 +976,8 @@
                                                             </select>
                                                         </div>
                                                     </div>
-
                                                     <!-- 5-1 -->
                                                     <!-- 6 -->
-
                                                     <div id="special01"
                                                          style="margin-left: 1%;padding:2% 0;border: 1px solid #bfbfbf;border-radius: 5px;margin-bottom: 2%"
                                                          class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -962,11 +997,20 @@
                                                             </button>
 
                                                         </div>
+                                                        <?php
+                                                        $sql6 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query6= mysqli_query($db->connect(), $sql6);
+                                                        $results6= mysqli_fetch_assoc($query6);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results6["special"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -985,14 +1029,12 @@
                                                             <img src="img/NewProject12.png">
                                                         </div>
                                                     </div>
-
                                                     <!-- 6 -->
                                                     <!-- 7 -->
-
                                                     <div id="starss01"
                                                          style="margin-left: 1%;padding:2% 0;border: 1px solid #bfbfbf;border-radius: 5px;margin-bottom: 2%"
                                                          class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                                                        <p style="margin-right: 11%">پروژه ستاره
+                                                        <p style="margin-right: 11%">پروژه ستاره دار
                                                         </p>
                                                         <div class="col-md-2 col-lg-2 col-xs-3 col-sm-3"
                                                              style="padding: 3% 3%">
@@ -1002,11 +1044,20 @@
                                                                 اضافه شود
                                                             </button>
                                                         </div>
+                                                        <?php
+                                                        $sql7 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query7= mysqli_query($db->connect(), $sql7);
+                                                        $results7= mysqli_fetch_assoc($query7);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results7["star"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1035,10 +1086,8 @@
                                                             <img src="img/NewProject13.png">
                                                         </div>
                                                     </div>
-
                                                     <!-- 7 -->
                                                     <!-- 7-1 -->
-
                                                     <div id="starss101"
                                                          style="background-color: #dcdcdc;display: none;margin-left: 1%;padding:2% 0;border: 1px solid #bfbfbf;border-radius: 5px;margin-bottom: 2%"
                                                          class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -1052,11 +1101,20 @@
                                                                 اضافه شود
                                                             </button>
                                                         </div>
+                                                        <?php
+                                                        $sql8 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query8= mysqli_query($db->connect(), $sql8);
+                                                        $results8= mysqli_fetch_assoc($query8);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results8["star"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1099,10 +1157,8 @@
                                                             </select>
                                                         </div>
                                                     </div>
-
                                                     <!-- 7-1 -->
                                                     <!-- 8 -->
-
                                                     <div id="services01"
                                                          style="margin-left: 1%;padding:2% 0;border: 1px solid #bfbfbf;border-radius: 5px;margin-bottom: 2%"
                                                          class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -1122,11 +1178,21 @@
                                                             </button>
 
                                                         </div>
+
+                                                        <?php
+                                                        $sql9 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query9= mysqli_query($db->connect(), $sql9);
+                                                        $results9= mysqli_fetch_assoc($query9);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results9["recrutment"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1142,10 +1208,8 @@
                                                             <img src="img/NewProject14.png">
                                                         </div>
                                                     </div>
-
                                                     <!-- 8 -->
                                                     <!-- 9 -->
-
                                                     <div id="sectranslate01"
                                                          style="display: none;margin-left: 1%;padding:2% 0;border: 1px solid #bfbfbf;border-radius: 5px;margin-bottom: 2%"
                                                          class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -1174,11 +1238,20 @@
                                                             </button>
 
                                                         </div>
+                                                        <?php
+                                                        $sql10 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query10= mysqli_query($db->connect(), $sql10);
+                                                        $results10= mysqli_fetch_assoc($query10);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results10["secret2"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1198,11 +1271,8 @@
                                                             <img src="img/NewProject15.png">
                                                         </div>
                                                     </div>
-
                                                     <!-- 9 -->
-
                                                     <!-- 11 -->
-
                                                     <div id="company01"
                                                          style="margin-left: 1%;padding:2% 0;border: 1px solid #bfbfbf;border-radius: 5px;margin-bottom: 2%"
                                                          class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -1222,11 +1292,20 @@
                                                             </button>
 
                                                         </div>
+                                                        <?php
+                                                        $sql11 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query11= mysqli_query($db->connect(), $sql11);
+                                                        $results11= mysqli_fetch_assoc($query11);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results11["firm"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1247,7 +1326,6 @@
                                                             <img src="img/NewProject17.png">
                                                         </div>
                                                     </div>
-
                                                     <!-- 11 -->
                                                     <br><br><br><br>
                                                     <button  type="button" id="text3"
@@ -1255,7 +1333,6 @@
                                                             style="font-size: 22px;width: 90%;background-color: #009900;color: #ffffff;">
                                                         پرداخت و ایجاد پروژه
                                                     </button>
-
 
                                                 </div>
                                                 <!--right-->
@@ -1524,11 +1601,20 @@
 
 
                                                         </div>
+                                                        <?php
+                                                        $sql12 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query12= mysqli_query($db->connect(), $sql12);
+                                                        $results12= mysqli_fetch_assoc($query12);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results12["private"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1566,11 +1652,20 @@
                                                                 شده
                                                             </button>
                                                         </div>
+                                                        <?php
+                                                        $sql13 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query13= mysqli_query($db->connect(), $sql13);
+                                                        $results13= mysqli_fetch_assoc($query13);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results13["secret"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1606,11 +1701,20 @@
                                                                 اضافه شده
                                                             </button>
                                                         </div>
+                                                        <?php
+                                                        $sql14 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query14= mysqli_query($db->connect(), $sql14);
+                                                        $results14= mysqli_fetch_assoc($query14);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results14["bold"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1643,11 +1747,20 @@
                                                                 اضافه شود
                                                             </button>
                                                         </div>
+                                                        <?php
+                                                        $sql15 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query15= mysqli_query($db->connect(), $sql15);
+                                                        $results15= mysqli_fetch_assoc($query15);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results15["fast"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1677,11 +1790,20 @@
                                                                 اضافه شده
                                                             </button>
                                                         </div>
+                                                        <?php
+                                                        $sql16 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query16= mysqli_query($db->connect(), $sql16);
+                                                        $results16= mysqli_fetch_assoc($query16);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results16["fast"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1728,11 +1850,20 @@
                                                             </button>
 
                                                         </div>
+                                                        <?php
+                                                        $sql17 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query17= mysqli_query($db->connect(), $sql17);
+                                                        $results17= mysqli_fetch_assoc($query17);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results17["special"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1768,11 +1899,20 @@
                                                                 اضافه شود
                                                             </button>
                                                         </div>
+                                                        <?php
+                                                        $sql18 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query18= mysqli_query($db->connect(), $sql18);
+                                                        $results18= mysqli_fetch_assoc($query18);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results18["star"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1818,11 +1958,20 @@
                                                                 اضافه شود
                                                             </button>
                                                         </div>
+                                                        <?php
+                                                        $sql19 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query19= mysqli_query($db->connect(), $sql19);
+                                                        $results19= mysqli_fetch_assoc($query19);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results19["star"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1888,11 +2037,20 @@
                                                             </button>
 
                                                         </div>
+                                                        <?php
+                                                        $sql20 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query20= mysqli_query($db->connect(), $sql20);
+                                                        $results20= mysqli_fetch_assoc($query20);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results20["recrutment"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1940,11 +2098,20 @@
                                                             </button>
 
                                                         </div>
+                                                        <?php
+                                                        $sql21 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query21= mysqli_query($db->connect(), $sql21);
+                                                        $results21= mysqli_fetch_assoc($query21);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results21["secret2"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -1988,11 +2155,20 @@
                                                             </button>
 
                                                         </div>
+                                                        <?php
+                                                        $sql22 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query22= mysqli_query($db->connect(), $sql22);
+                                                        $results22= mysqli_fetch_assoc($query22);
+                                                        echo '
+                                                        
                                                         <div style="padding: 3% 1%"
                                                              class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
-                                                            12،000
+                                                           '.$results22["firm"].'
                                                             تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-8 col-lg-8 col-xs-5 col-sm-5">
 
                                                             <p style="font-size: 14px">
@@ -2221,20 +2397,40 @@
                                     </div>
                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
                                          style="padding: 0;margin-bottom: 3%">
+                                        <?php
+                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
+                                        $query23= mysqli_query($db->connect(), $sql23);
+                                        $results23= mysqli_fetch_assoc($query23);
+                                        echo '
+                                                        
+                                                        <div style="padding: 0 1%"
+                                                             class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
+                                                           '.$results23["matchtime"].'تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                        ?>
                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                             style="padding: 0;text-align: left">12،000 تومان
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                             style="padding: 0;">هزينه زمان انجام مسابقه
+                                             style="padding: 0;float: right">هزينه زمان انجام مسابقه
                                         </div>
                                     </div>
                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
                                          style="padding: 0;margin-bottom: 3%">
+                                        <?php
+                                        $sql24 = "SELECT * FROM cost order by ID DESC ";
+                                        $query24= mysqli_query($db->connect(), $sql24);
+                                        $results24= mysqli_fetch_assoc($query24);
+                                        echo '
+                                                        
+                                                        <div style="padding: 0 1%"
+                                                             class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
+                                                           '.$results24["feegarantee"].'تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                        ?>
                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                             style="padding: 0;text-align:left">12،000 تومان
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                             style="padding: 0;">مبلغ گروگذاري
+                                             style="padding: 0;float: right">مبلغ گروگذاري
 
                                         </div>
                                     </div>
@@ -2245,6 +2441,7 @@
                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                              style="padding: 0;text-align:left">12،000 تومان
                                         </div>
+
                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                              style="padding: 0;">جمع کل
                                         </div>
@@ -2491,20 +2688,40 @@
                                         </div>
                                         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
                                              style="padding: 0;margin-bottom: 3%">
+                                            <?php
+                                            $sql25 = "SELECT * FROM cost order by ID DESC ";
+                                            $query25= mysqli_query($db->connect(), $sql25);
+                                            $results25= mysqli_fetch_assoc($query25);
+                                            echo '
+                                                        
+                                                        <div style="padding: 0 1%"
+                                                             class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
+                                                           '.$results25["matchtime"].'تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                            ?>
                                             <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                 style="padding: 0;text-align: left">12،000 تومان
-                                            </div>
-                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                 style="padding: 0;">هزينه زمان انجام مسابقه
+                                                 style="padding: 0;float: right">هزينه زمان انجام مسابقه
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
                                              style="padding: 0;margin-bottom: 3%">
+                                            <?php
+                                            $sql26 = "SELECT * FROM cost order by ID DESC ";
+                                            $query26= mysqli_query($db->connect(), $sql26);
+                                            $results26= mysqli_fetch_assoc($query26);
+                                            echo '
+                                                        
+                                                        <div style="padding: 0 1%"
+                                                             class="col-md-1 col-lg-1 col-xs-2 col-sm-2">
+                                                           '.$results26["feegarantee"].'تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                            ?>
                                             <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                 style="padding: 0;text-align:left">12،000 تومان
-                                            </div>
-                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                 style="padding: 0;">مبلغ گروگذاري
+                                                 style="padding: 0;float: right">مبلغ گروگذاري
 
                                             </div>
                                         </div>

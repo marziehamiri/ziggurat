@@ -941,3 +941,15 @@ span.round-tabs.five{
     background-color: #1e90ff;
 }
 
+::placeholder .placeholder1 { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder .placeholder1{ /* Internet Explorer 10-11 */
+    color: white;
+}
+
+::-ms-input-placeholder .placeholder1 { /* Microsoft Edge */
+    color: white;
+}

@@ -47,11 +47,7 @@ if(
         $query = mysqli_query($db->connect(), $insertex);
 
         $html = '';
-        if($serve==1){
-            $serve1 ="بلی";
-        }else{
-            $serve1="خیر";
-        }
+       $serve1=$serve==1 ? 'خیر' : 'بلی';
         $html = '
         <div class="col-md-5 col-lg-5 col-xs-12 col-sm-5" style="float: right;font-size: 18px">
            <label>سمت :</label> &nbsp;<label style="border-bottom: 1px solid rgba(169,169,169,0.6)">'.$position.'</label>&nbsp;<i class="fas fa-pen" style="margin-right: 5%;color: #8CBFF3"></i>&nbsp;&nbsp;<i class="far fa-trash-alt" style="color: #b05b5a"></i><br>

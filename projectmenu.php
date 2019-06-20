@@ -153,7 +153,7 @@
                 
                     </label><span style="margin-left: 3%;color: white;background: orange;border-radius: 3px;padding: 0% 1%;">4.57</span>
                      <label style="margin-left: 3%">مبلغ :&nbsp;'.$results["fee"].'</label>
-                    <label style="margin-left: 3%">نوع پرداخت :&nbsp; '.$results["type"].'</label> 
+                  <label style="margin-left: 3%">نوع پرداخت :&nbsp; '.$results["type"].'</label> 
                      <label style="margin-left: 3%">فریلنسر معمولی</label>
                      
                      <label style="margin-left: 3%">تعداد پیشنهاد :&nbsp;'.$results["countfree"].'</label>

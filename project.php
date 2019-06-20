@@ -41,7 +41,7 @@
      onclick="faidoutsearch()" id="faidoutsearch">
     <div class="container">
         <p style="margin: 5%">
-            <b>srtfghdftgbtgf
+            <b>mohammad
                 کاربر گرامی،
                 <br>
                 لطفاً قبل از ثبت پروژه، شرایط زیر را مطالعه و در صورت تمایل قبول نمایید:

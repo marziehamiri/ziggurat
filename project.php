@@ -1768,14 +1768,14 @@
                                                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
                                                      style="padding: 0;margin-bottom: 3%;display: none" id="secret2project1">
                                                     <?php
-                                                    $sql41 = "SELECT * FROM cost order by ID DESC ";
-                                                    $query41 = mysqli_query($db->connect(), $sql41);
-                                                    $results41 = mysqli_fetch_assoc($query41);
+                                                    $sql44 = "SELECT * FROM cost order by ID DESC ";
+                                                    $query44 = mysqli_query($db->connect(), $sql44);
+                                                    $results44 = mysqli_fetch_assoc($query44);
                                                     echo '
                                                         
                                                          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;text-align:left">
-                                                           '.$results41["secret2"].' تومان
+                                                           '.$results44["secret2"].' تومان
                                                         </div>
                                                       
                                                         ';

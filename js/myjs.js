@@ -960,12 +960,15 @@ function proproject() {
     $("#pripro").css("background"," #dcdcdc");
     document.getElementById("pproject").style.display="none";
     document.getElementById("pproject1").style.display="block";
+    document.getElementById("privateproject1").style.display="block";
 }
 function proproject1() {
     var pripro=document.getElementById("pripro");
     $("#pripro").css("background"," #ffffff");
     document.getElementById("pproject").style.display="block";
     document.getElementById("pproject1").style.display="none";
+    document.getElementById("privateproject1").style.display="none";
+
 }function proproject01() {
     var pripro01=document.getElementById("pripro01");
     var privateproject=document.getElementById("privateproject");
@@ -989,46 +992,59 @@ function secretproject() {
     $("#secret").css("background"," #dcdcdc");
     document.getElementById("secproject").style.display="none";
     document.getElementById("secproject1").style.display="block";
+    document.getElementById("secretproject1").style.display="block";
 }
 function secretproject1() {
     var secret=document.getElementById("secret");
     $("#secret").css("background"," #ffffff");
     document.getElementById("secproject").style.display="block";
     document.getElementById("secproject1").style.display="none";
+    document.getElementById("secretproject1").style.display="none";
 }function secretproject01() {
     var secret01=document.getElementById("secret01");
+    var secproject=document.getElementById("secretproject");
     $("#secret01").css("background"," #dcdcdc");
     document.getElementById("secproject01").style.display="none";
     document.getElementById("secproject101").style.display="block";
+    document.getElementById("secretproject").style.display="block";
 }
 function secretproject101() {
     var secret01=document.getElementById("secret01");
+    var secproject=document.getElementById("secretproject");
+
     $("#secret01").css("background"," #ffffff");
     document.getElementById("secproject01").style.display="block";
     document.getElementById("secproject101").style.display="none";
+    document.getElementById("secretproject").style.display="none";
 }
 function boldproject() {
     var bold=document.getElementById("bold");
     $("#bold").css("background"," #dcdcdc");
     document.getElementById("bproject").style.display="none";
     document.getElementById("bproject1").style.display="block";
+    document.getElementById("boldproject1").style.display="block";
 }
 function boldproject1() {
     var bold=document.getElementById("bold");
     $("#bold").css("background"," #ffffff");
     document.getElementById("bproject").style.display="block";
     document.getElementById("bproject1").style.display="none";
+    document.getElementById("boldproject1").style.display="none";
 }function boldproject01() {
     var bold01=document.getElementById("bold01");
+    var boldproject=document.getElementById("boldproject");
     $("#bold01").css("background"," #dcdcdc");
     document.getElementById("bproject01").style.display="none";
     document.getElementById("bproject101").style.display="block";
+    document.getElementById("boldproject").style.display="block";
 }
 function boldproject101() {
     var bold01=document.getElementById("bold01");
+    var boldproject=document.getElementById("boldproject");
     $("#bold01").css("background"," #ffffff");
     document.getElementById("bproject01").style.display="block";
     document.getElementById("bproject101").style.display="none";
+    document.getElementById("boldproject").style.display="none";
 }
 function quickproject() {
     var quick=document.getElementById("quick");
@@ -1036,6 +1052,7 @@ function quickproject() {
 
     document.getElementById("quick").style.display="none";
     document.getElementById("quick1").style.display="block";
+    document.getElementById("fastproject1").style.display="block";
 
 }
 function quickproject1() {
@@ -1043,22 +1060,27 @@ function quickproject1() {
     var quick1=document.getElementById("quick1");
 
     document.getElementById("quick1").style.display="none";
+    document.getElementById("fastproject1").style.display="none";
     document.getElementById("quick").style.display="block";
 
 }function quickproject01() {
     var quick01=document.getElementById("quick01");
     var quick101=document.getElementById("quick101");
+    var fastproject=document.getElementById("fastproject");
 
     document.getElementById("quick01").style.display="none";
     document.getElementById("quick101").style.display="block";
+    document.getElementById("fastproject").style.display="block";
 
 }
 function quickproject101() {
     var quick01=document.getElementById("quick01");
     var quick101=document.getElementById("quick101");
+    var fastproject=document.getElementById("fastproject");
 
     document.getElementById("quick101").style.display="none";
     document.getElementById("quick01").style.display="block";
+    document.getElementById("fastproject").style.display="none";
 
 }
 function specialproject() {
@@ -1066,23 +1088,27 @@ function specialproject() {
     $("#special").css("background"," #dcdcdc");
     document.getElementById("speproject").style.display="none";
     document.getElementById("speproject1").style.display="block";
+    document.getElementById("specialproject1").style.display="block";
 }
 function specialproject1() {
     var special=document.getElementById("special");
     $("#special").css("background"," #ffffff");
     document.getElementById("speproject").style.display="block";
     document.getElementById("speproject1").style.display="none";
+    document.getElementById("specialproject1").style.display="none";
 }function specialproject01() {
     var special01=document.getElementById("special01");
     $("#special01").css("background"," #dcdcdc");
     document.getElementById("speproject01").style.display="none";
     document.getElementById("speproject101").style.display="block";
+    document.getElementById("specialproject").style.display="block";
 }
 function specialproject101() {
     var special01=document.getElementById("special01");
     $("#special01").css("background"," #ffffff");
     document.getElementById("speproject01").style.display="block";
     document.getElementById("speproject101").style.display="none";
+    document.getElementById("specialproject").style.display="none";
 }
 function starsproject() {
     var starss=document.getElementById("starss");
@@ -1090,6 +1116,7 @@ function starsproject() {
 
     document.getElementById("starss").style.display="none";
     document.getElementById("starss1").style.display="block";
+    document.getElementById("starproject1").style.display="block";
 
 }
 function starsproject1() {
@@ -1097,6 +1124,7 @@ function starsproject1() {
     var starss1=document.getElementById("starss1");
 
     document.getElementById("starss1").style.display="none";
+    document.getElementById("starproject1").style.display="none";
     document.getElementById("starss").style.display="block";
 
 }function starsproject01() {
@@ -1105,6 +1133,7 @@ function starsproject1() {
 
     document.getElementById("starss01").style.display="none";
     document.getElementById("starss101").style.display="block";
+    document.getElementById("starproject").style.display="block";
 
 }
 function starsproject101() {
@@ -1113,6 +1142,7 @@ function starsproject101() {
 
     document.getElementById("starss101").style.display="none";
     document.getElementById("starss01").style.display="block";
+    document.getElementById("starproject").style.display="none";
 
 }
 function servicesproject() {
@@ -1120,23 +1150,27 @@ function servicesproject() {
     $("#services").css("background"," #dcdcdc");
     document.getElementById("serproject").style.display="none";
     document.getElementById("serproject1").style.display="block";
+    document.getElementById("recruitmentproject1").style.display="block";
 }
 function servicesproject1() {
     var services=document.getElementById("services");
     $("#services").css("background"," #ffffff");
     document.getElementById("serproject").style.display="block";
     document.getElementById("serproject1").style.display="none";
+    document.getElementById("recruitmentproject1").style.display="none";
 }function servicesproject01() {
     var services01=document.getElementById("services01");
     $("#services01").css("background"," #dcdcdc");
     document.getElementById("serproject01").style.display="none";
     document.getElementById("serproject101").style.display="block";
+    document.getElementById("recruitmentproject").style.display="block";
 }
 function servicesproject101() {
     var services01=document.getElementById("services01");
     $("#services01").css("background"," #ffffff");
     document.getElementById("serproject01").style.display="block";
     document.getElementById("serproject101").style.display="none";
+    document.getElementById("recruitmentproject").style.display="none";
 }
 function myFunction24() {
     var checkinput24 = document.getElementById("checkinput24");
@@ -1155,46 +1189,54 @@ function sectranslateproject() {
     $("#sectranslate").css("background"," #dcdcdc");
     document.getElementById("sectraproject").style.display="none";
     document.getElementById("sectraproject1").style.display="block";
+    document.getElementById("secret2project1").style.display="block";
 }
 function sectranslateproject1() {
     var sectranslate=document.getElementById("sectranslate");
     $("#sectranslate").css("background"," #ffffff");
     document.getElementById("sectraproject").style.display="block";
     document.getElementById("sectraproject1").style.display="none";
+    document.getElementById("secret2project1").style.display="none";
 }function sectranslateproject01() {
     var sectranslate01=document.getElementById("sectranslate01");
     $("#sectranslate01").css("background"," #dcdcdc");
     document.getElementById("sectraproject01").style.display="none";
     document.getElementById("sectraproject101").style.display="block";
+    document.getElementById("secret2project").style.display="block";
 }
 function sectranslateproject101() {
     var sectranslate01=document.getElementById("sectranslate01");
     $("#sectranslate01").css("background"," #ffffff");
     document.getElementById("sectraproject01").style.display="block";
     document.getElementById("sectraproject101").style.display="none";
+    document.getElementById("secret2project").style.display="none";
 }
 function companyproject() {
     var company=document.getElementById("company");
     $("#company").css("background"," #dcdcdc");
     document.getElementById("compproject").style.display="none";
     document.getElementById("compproject1").style.display="block";
+    document.getElementById("firmproject1").style.display="block";
 }
 function companyproject1() {
     var company=document.getElementById("company");
     $("#company").css("background"," #ffffff");
     document.getElementById("compproject").style.display="block";
     document.getElementById("compproject1").style.display="none";
+    document.getElementById("firmproject1").style.display="none";
 }function companyproject01() {
     var company01=document.getElementById("company01");
     $("#company01").css("background"," #dcdcdc");
     document.getElementById("compproject01").style.display="none";
     document.getElementById("compproject101").style.display="block";
+    document.getElementById("firmproject").style.display="block";
 }
 function companyproject101() {
     var company01=document.getElementById("company01");
     $("#company01").css("background"," #ffffff");
     document.getElementById("compproject01").style.display="block";
     document.getElementById("compproject101").style.display="none";
+    document.getElementById("firmproject").style.display="none";
 }
 function tabshow() {
     document.getElementById("menu11111").style.display="block";

@@ -435,7 +435,7 @@
                                 <div class="tab-pane col-md-12 col-lg-12 col-xs-12 col-sm-12" role="tabpanel" id="menu1"
                                      style="">
 
-                                    <select class="form-group" id="area-dropdown2">
+                                    <select class="form-group" id="area-dropdown2" name="fee">
                                         <option>فريلنسر با سطح مهارت مقدماتي (ساعتي 10 تا 15 هزار)</option>
                                         <option>فريلنسر با سطح مهارت متوسط (ساعتي 15 تا 20 هزار)</option>
                                         <option>فريلنسر با سطح مهارت استاندارد (ساعتي 20 تا 30 هزار)</option>
@@ -459,14 +459,14 @@
                                     </script>
                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 routedropdown2"
                                          style="width: 70%;float: right;margin-bottom: 3%;display: none">
-                                        <input type="text" style="margin-top: 2%" class="form-control"
+                                        <input type="text" style="margin-top: 2%" class="form-control" name="minfee"
                                                placeholder="حداقل دستمزد مورد نظر بر حسب تومان (نبايد کمتر از 10 هزار تومان باشد)">
-                                        <input type="text" style="margin-top: 2%" class="form-control"
+                                        <input type="text" style="margin-top: 2%" class="form-control" name="maxfee"
                                                placeholder="حداکثر دستمزد مورد نظر بر حسب تومان (نبايد کمتر از حداقل دستمزد باشد)">
 
                                     </div>
                                     <br><br><br><br>
-                                    <select class="form-group" id="area-dropdown1">
+                                    <select class="form-group" id="area-dropdown1" name="hour">
                                         <option disabled="disabled">چند ساعت در هفته به خدمات فريلنسر نياز داريد؟
                                         </option>
                                         <option>توافقی</option>
@@ -496,7 +496,7 @@
                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 routedropdown1"
                                          style="width: 70%;float: right;margin-bottom: 3%;display: none">
                                         <label>روز</label>
-                                        <input type="text" class="form-group">
+                                        <input type="text" class="form-group" name="day">
                                     </div>
                                     <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="direction: ltr">
 
@@ -521,7 +521,7 @@
                                             بيشتر بدانيد.</p>
                                         <br>
                                         <br>
-                                        <select class="form-group" id="area-dropdownn">
+                                        <select class="form-group" id="area-dropdownn" name="budget">
                                             <option>ميکرو پروژه (بين 100 تا 350 هزار)</option>
                                             <option>پروژه ساده (350 تا 700 هزار)</option>
                                             <option>پروژه خيلي کوچک (700 هزار تا 2 ميليون)</option>
@@ -550,9 +550,9 @@
 
                                         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 routedropdownn"
                                              style="display: none" id="selection3">
-                                            <input type="text" style="margin-top: 2%;width: 70%" class="form-control"
+                                            <input type="text" style="margin-top: 2%;width: 70%" class="form-control" name="minbudget"
                                                    placeholder="حداقل بودجه مورد نظر بر حسب تومان (نبايد کمتر از 100 هزار تومان باشد)">
-                                            <input type="text" style="margin-top: 2%;width: 70%;" class="form-control"
+                                            <input type="text" style="margin-top: 2%;width: 70%;" class="form-control" name="maxbudget"
                                                    placeholder="حداکثر بودجه مورد نظر بر حسب تومان (نبايد کمتر از حداقل بودجه باشد)">
                                         </div>
                                         <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="direction: ltr">
@@ -568,10 +568,10 @@
                                             <br>
                                             <p>زمان مورد نظر شما (بر حسب روز) جهت انجام پروژه چقدر است؟</p>
                                             <input type="text" id="timesele13" style="width: 70%;"
-                                                   onkeypress="timsele3()" class="form-control"
+                                                   onkeypress="timsele3()" class="form-control" name="mintime"
                                                    placeholder="زمان مقطوع مورد نظر بر حسب روز">
                                             <br> <input type="text" id="timesele23" style="width: 70%;"
-                                                        onkeypress="timsele33()" class="form-control"
+                                                        onkeypress="timsele33()" class="form-control" name="maxtime"
                                                         placeholder="حداکثر زمان مورد نظر بر حسب روز">
                                             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="direction: ltr;padding: 0">
 
@@ -648,140 +648,140 @@
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
                                                          style="padding: 0;margin-bottom: 3%;display: none" id="boldproject">
                                                         <?php
-                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
-                                                        $query23 = mysqli_query($db->connect(), $sql23);
-                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        $sql25 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query25 = mysqli_query($db->connect(), $sql25);
+                                                        $results25 = mysqli_fetch_assoc($query25);
                                                         echo '
                                                         
                                                          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;text-align:left">
-                                                           '.$results23["private"].' تومان
+                                                           '.$results25["bold"].' تومان
                                                         </div>
                                                       
                                                         ';
                                                         ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;">پروژه خصوصی
+                                                             style="padding: 0;">پروژه برجسته
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
-                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="fastproject">
                                                         <?php
-                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
-                                                        $query23 = mysqli_query($db->connect(), $sql23);
-                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        $sql26 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query26 = mysqli_query($db->connect(), $sql26);
+                                                        $results26 = mysqli_fetch_assoc($query26);
                                                         echo '
                                                         
                                                          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;text-align:left">
-                                                           '.$results23["private"].' تومان
+                                                           '.$results26["fast"].' تومان
                                                         </div>
                                                       
                                                         ';
                                                         ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;">پروژه خصوصی
+                                                             style="padding: 0;">پروژه فوری
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
-                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="specialproject">
                                                         <?php
-                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
-                                                        $query23 = mysqli_query($db->connect(), $sql23);
-                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        $sql27 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query27 = mysqli_query($db->connect(), $sql27);
+                                                        $results27 = mysqli_fetch_assoc($query27);
                                                         echo '
                                                         
                                                          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;text-align:left">
-                                                           '.$results23["private"].' تومان
+                                                           '.$results27["special"].' تومان
                                                         </div>
                                                       
                                                         ';
                                                         ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;">پروژه خصوصی
+                                                             style="padding: 0;">پروژه ویژه
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
-                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="starproject">
                                                         <?php
-                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
-                                                        $query23 = mysqli_query($db->connect(), $sql23);
-                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        $sql28 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query28 = mysqli_query($db->connect(), $sql28);
+                                                        $results28 = mysqli_fetch_assoc($query28);
                                                         echo '
                                                         
                                                          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;text-align:left">
-                                                           '.$results23["private"].' تومان
+                                                           '.$results28["star"].' تومان
                                                         </div>
                                                       
                                                         ';
                                                         ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;">پروژه خصوصی
+                                                             style="padding: 0;">پروژه ستاره دار
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
-                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="recruitmentproject">
                                                         <?php
-                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
-                                                        $query23 = mysqli_query($db->connect(), $sql23);
-                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        $sql29 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query29 = mysqli_query($db->connect(), $sql29);
+                                                        $results29 = mysqli_fetch_assoc($query29);
                                                         echo '
                                                         
                                                          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;text-align:left">
-                                                           '.$results23["private"].' تومان
+                                                           '.$results29["recruitment"].' تومان
                                                         </div>
                                                       
                                                         ';
                                                         ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;">پروژه خصوصی
+                                                             style="padding: 0;">پروژه استخدامی
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
-                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="firmproject">
                                                         <?php
-                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
-                                                        $query23 = mysqli_query($db->connect(), $sql23);
-                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        $sql30 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query30 = mysqli_query($db->connect(), $sql30);
+                                                        $results30 = mysqli_fetch_assoc($query30);
                                                         echo '
                                                         
                                                          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;text-align:left">
-                                                           '.$results23["private"].' تومان
+                                                           '.$results30["firm"].' تومان
                                                         </div>
                                                       
                                                         ';
                                                         ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;">پروژه خصوصی
+                                                             style="padding: 0;">پروژه شرکتی
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
-                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject">
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="secret2project">
                                                         <?php
-                                                        $sql23 = "SELECT * FROM cost order by ID DESC ";
-                                                        $query23 = mysqli_query($db->connect(), $sql23);
-                                                        $results23 = mysqli_fetch_assoc($query23);
+                                                        $sql31 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query31 = mysqli_query($db->connect(), $sql31);
+                                                        $results31 = mysqli_fetch_assoc($query31);
                                                         echo '
                                                         
                                                          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;text-align:left">
-                                                           '.$results23["private"].' تومان
+                                                           '.$results31["secret2"].' تومان
                                                         </div>
                                                       
                                                         ';
                                                         ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;">پروژه خصوصی
+                                                             style="padding: 0;">پروژه محرمانه با عدم افشا
                                                         </div>
                                                     </div>
 
@@ -1521,7 +1521,7 @@
                                             بيشتر بدانيد.</p>
                                         <br>
                                         <br>
-                                        <select class="form-group" id="area-dropdown">
+                                        <select class="form-group" id="area-dropdown" name="budget">
                                             <option>ميکرو پروژه (بين 100 تا 350 هزار)</option>
                                             <option>پروژه ساده (350 تا 700 هزار)</option>
                                             <option>پروژه خيلي کوچک (700 هزار تا 2 ميليون)</option>
@@ -1550,9 +1550,9 @@
 
                                         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 routedropdown"
                                              style="display: none" id="selection3">
-                                            <input type="text" style="margin-top: 2%;width: 70%" class="form-control"
+                                            <input type="text" style="margin-top: 2%;width: 70%" class="form-control" name="minbudget"
                                                    placeholder="حداقل بودجه مورد نظر بر حسب تومان (نبايد کمتر از 100 هزار تومان باشد)">
-                                            <input type="text" style="margin-top: 2%;width: 70%;" class="form-control"
+                                            <input type="text" style="margin-top: 2%;width: 70%;" class="form-control" name="maxbudget"
                                                    placeholder="حداکثر بودجه مورد نظر بر حسب تومان (نبايد کمتر از حداقل بودجه باشد)">
                                         </div>
                                         <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="direction: ltr">
@@ -1567,10 +1567,10 @@
                                             <p style="color: #2196F3">زمان :</p>
                                             <br>
                                             <p>زمان مورد نظر شما (بر حسب روز) جهت انجام پروژه چقدر است؟</p>
-                                            <input type="text" id="timesele1" style="width: 70%;"
+                                            <input type="text" id="timesele1" style="width: 70%;" name="mintime"
                                                    onkeypress="timsele1()"  class="form-control"
                                                    placeholder="زمان مقطوع مورد نظر بر حسب روز">
-                                            <br> <input type="text" id="timesele2" style="width: 70%;"
+                                            <br> <input type="text" id="timesele2" style="width: 70%;" name="maxtime"
                                                         onkeypress="timsele2()" class="form-control"
                                                         placeholder="حداکثر زمان مورد نظر بر حسب روز">
                                             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="direction: ltr;padding: 0">
@@ -1604,33 +1604,190 @@
                                                              style="padding: 0;">تعریف پروژه
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
-                                                         style="padding: 0;margin-bottom: 3%">
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;text-align: left">12،000 تومان
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="privateproject1">
+                                                        <?php
+                                                        $sql33 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query33 = mysqli_query($db->connect(), $sql33);
+                                                        $results33 = mysqli_fetch_assoc($query33);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results33["private"].' تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;">پروژه خصوصی
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
-                                                         style="padding: 0;margin-bottom: 3%">
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;text-align:left">12،000 تومان
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="secretproject1">
+                                                        <?php
+                                                        $sql34 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query34 = mysqli_query($db->connect(), $sql34);
+                                                        $results34 = mysqli_fetch_assoc($query34);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results34["secret"].' تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;">پروژه محرمانه
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
-                                                         style="padding: 0;margin-bottom: 3%">
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
-                                                             style="padding: 0;text-align:left">12،000 تومان
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="boldproject1">
+                                                        <?php
+                                                        $sql35 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query35 = mysqli_query($db->connect(), $sql35);
+                                                        $results35 = mysqli_fetch_assoc($query35);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results35["bold"].' تومان
                                                         </div>
+                                                      
+                                                        ';
+                                                        ?>
                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
                                                              style="padding: 0;">پروژه برجسته
                                                         </div>
                                                     </div>
+
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="fastproject1">
+                                                        <?php
+                                                        $sql36 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query36 = mysqli_query($db->connect(), $sql36);
+                                                        $results36 = mysqli_fetch_assoc($query36);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results36["fast"].' تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                                        ?>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;">پروژه فوری
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="specialproject1">
+                                                        <?php
+                                                        $sql37 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query37 = mysqli_query($db->connect(), $sql27);
+                                                        $results37 = mysqli_fetch_assoc($query37);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results37["special"].' تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                                        ?>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;">پروژه ویژه
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="starproject1">
+                                                        <?php
+                                                        $sql38 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query38 = mysqli_query($db->connect(), $sql38);
+                                                        $results38 = mysqli_fetch_assoc($query38);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results38["star"].' تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                                        ?>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;">پروژه ستاره دار
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="recruitmentproject1">
+                                                        <?php
+                                                        $sql39 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query39 = mysqli_query($db->connect(), $sql39);
+                                                        $results39 = mysqli_fetch_assoc($query39);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results39["recruitment"].' تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                                        ?>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;">پروژه استخدامی
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="firmproject1">
+                                                        <?php
+                                                        $sql40 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query40 = mysqli_query($db->connect(), $sql40);
+                                                        $results40 = mysqli_fetch_assoc($query40);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results40["firm"].' تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                                        ?>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;">پروژه شرکتی
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                                                         style="padding: 0;margin-bottom: 3%;display: none" id="secret2project1">
+                                                        <?php
+                                                        $sql41 = "SELECT * FROM cost order by ID DESC ";
+                                                        $query41 = mysqli_query($db->connect(), $sql41);
+                                                        $results41 = mysqli_fetch_assoc($query41);
+                                                        echo '
+                                                        
+                                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;text-align:left">
+                                                           '.$results41["secret2"].' تومان
+                                                        </div>
+                                                      
+                                                        ';
+                                                        ?>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6"
+                                                             style="padding: 0;">پروژه محرمانه با عدم افشا
+                                                        </div>
+                                                    </div>
+
+
+
+
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
                                                          style="padding: 0;margin-bottom: 3%">
                                                         <hr style="border-top: 1px solid darkgray;">
@@ -1692,6 +1849,10 @@
                                                         <img src="img/NewProject7.png" id="image2"
                                                              onmouseleave="hoverbrand1()" style="display: none;">
                                                     </div>
+
+
+
+
                                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12"
                                                          style="text-align: center;">
                                                         <p style="color: #2196F3;"><b>ضمانت بازگشت وجه</b></p>
@@ -2678,7 +2839,7 @@
                                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="margin-right: 2%">
 
                                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
-                                            <select id="area-dropdown222">
+                                            <select id="area-dropdown222" name="day">
                                                 <option disabled="disabled" selected>روز</option>
                                                 <option value="area222">2</option>
                                                 <option value="area223">3</option>
